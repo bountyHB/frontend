@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 3</title>
+
+    <style>
+        /* td, th{
+            width: 50px;
+            height: 50px;
+        } */
+        caption{
+            color:red;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        thead{
+            background-color: pink;
+            color:white;
+        }
+        tbody{
+            background-color: yellow;
+        }
+        tfoot{
+            background-color: orangered;
+            color:blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>연습문제3_표태그</h1>
+    <hr>
+    <!-- table>(thead>tr>th*4)+(tbody>(tr>td*4)*6)+(tfoot>tr>th*4) -->
+    <table border="1">
+        <caption>KH 정보교육원 강의</caption>
+        <thead>
+        <tr>
+            <th>관</th>
+            <th>강의장</th>
+            <th>인원수</th>
+            <th>강사명</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td rowspan="6">1관</td>
+            <td rowspan="2">C강의장</td>
+            <td rowspan="2"><center>30명</center></td>
+            <td>오전 : 문인수 <button>신청하기</button></td>
+        </tr>
+        <tr>
+            <td>오후 : 문인수 <button>신청하기</button></td>
+            <!-- <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <td rowspan="2">S강의장</td>
+            <td rowspan="2"><center>23명</center></td>
+            <td>오전 : 엄솔이 <button>신청하기</button></td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td>오후 : 엄솔이 <button>신청하기</button></td>
+            <!-- <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <td rowspan="2">T강의장</td>
+            <td rowspan="2"><center>23명</center></td>
+            <td>오전 : 김진명  <button>신청하기</button></td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td>오후 : 김진명  <button>신청하기</button></td>
+            <!-- <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <th colspan="4">많이 신청해주세요!</th>
+            <!-- <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
