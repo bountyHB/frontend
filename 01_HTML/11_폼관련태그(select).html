@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그 (select)</title>
+</head>
+<body>
+    <h2>여러 값 표현 태그</h2>
+    <hr>
+    <h2>select 태그</h2>
+    <form>
+        <label for="national">국적 : </label>
+        <!-- size로 드롭다운 갯수를 설정할 수 있다. (기본값 : 1) -->
+        <select name="national" id="national" size="1">
+            <!-- 목록은 option이라는 태그를 통해 생성 -->
+            <!-- optgoup으로 옵션을 묶어줄 수 있다. -->
+            <optgroup label="아시아">
+                <option value="kr">한국</option>
+                <option value="th">태국</option>
+            </optgroup>
+
+            <option value="us">미국</option>
+            <option value="uk">영국</option>
+            <option value="fr">프랑스</option>
+            <option selected>----</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="전송">
+        <input type="reset" value="초기화">
+    </form>
+    <br><br>
+
+    <hr>
+    <h2>datalist 태그</h2>
+    <form>
+        <label>
+            색상 : <input type="text" name="color" list="colors">
+        </label>
+
+        <datalist id="colors">
+            <option value="black">검정</option>
+            <option value="white">하양</option>
+            <option value="blue">파랑</option>
+        </datalist>
+
+        <input type="submit" value="전송">
+    </form>
+    <br><br>
+
+    <hr>
+    <h2>textarea 태그</h2>
+    <!-- 
+        type="text"와 빗스하지만 여러줄의 텍스트를 입력할 수 있다.
+        기본적으로 사이즈 변경이 가능하기 때문에 resize : none으로 변경할 수 있다.
+    -->
+    <textarea name="textarea" cols="30" rows="10"
+    placeholder="내용을 입력하세요." style="resize: none"></textarea>
+    <br>
+    <input type="submit" value="전송">
+    <br><br>
+
+    <hr>
+    <!-- 작업의 진행 상태를 나타내는 태그 -->
+    <h2>progress 태그</h2>
+    <progress value="30" max="100"></progress>
+    <br><br>
+    
+    <hr>
+    <!-- 전체 크기중에 사용중인 만큼을 나타내는 태그 -->
+    <!-- low, high로 기준점을 잡고 범위를 벗어나게 되면 색깔이 변하도록 만들 수 있다. -->
+    <h2>meter 태그</h2>
+    <meter min="0" max="100" high="70" value="80"></meter>
+    <br><br>
+
+    <hr>
+    <h3>button</h3>
+    <!-- 
+        button 태그 
+        
+        form 태그 안에서 button태그를 만들 때,
+        별도의 타입 지정을 하지 않으면 submit으로 동작을 하게 된다.
+        
+        form 태그 바깥에서 만들게 되면, 
+        별도의 기능이 없어 사용자가 직접 기능을 구현해주어야한다. 
+    -->
+    <button><b>버튼1</b></button>
+    <br><br>
+    <button type="reset">버튼2</button>
+    <br><br>
+</form>
+    <!-- 아무런 동작을 하지 않는 일반적인 button -->
+    <button>버튼3</button>
+<br><br>
+</body>
+</html>

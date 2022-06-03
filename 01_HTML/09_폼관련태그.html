@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+</head>
+<body>
+    <h2>폼 태그의 기본 구조</h2>
+    <hr>
+    <!-- action은 서버나 페이지를 지정해 준다. -->
+    <h3>검색 기능</h3>
+    <form name="search_form" action="" method="get">
+        <!-- label 태그로 감싸면, 요소가 연결되었다고 인식해서 글씨만 클릭해도 내용 요소가 선택된다. -->
+        <!-- label안에 들어가는건 name값이 아닌 id값. -->
+        <label>
+        <!-- 
+            name 속성
+            form 태그 안에서 input 태그를 구분하는 역할을 한다.
+            서버로 값을 전달할 때 name 속성과 value 값이 세트(key = value)로 묶어서 전송한다.
+        -->
+            검색할 내용 : <input type="text" name="search">
+        </label>
+        <!-- 
+            submit 버튼을 눌렀을 때 method 속성에 지정된 전송 방식으로
+            action 속성에 지정한 서버로 사용자가 입력한 값들을 전송한다. 
+        -->
+        <input type="submit" value="검색">
+    </form>
+    <br><br>
+
+    <hr>
+    <h3>회원가입 폼</h3>
+    <!-- 개인정보를 보호를 위해, 전송방식을 post로 한다. -->
+    <form name="test" action="" method="post">
+        <!-- label을 위처럼 포함시키는 방식보다 따로 나눠놓는 방식을 더 자주 사용 -->
+        <!-- fieldset으로 그룹을 묶었다. -->
+        <fieldset>
+            <!-- fieldset은 legend로 제목을 붙인다.  -->
+            <legend>회원 정보</legend>
+            <label for="userId">아이디 &nbsp;&nbsp;&nbsp;: </label> 
+            <input type="text" name="userId" id="userId" required>
+            <br><br>
+            <label for="userPwd">패스워드 : </label>
+            <input type="password" name="userPwd" id="userPwd" placeholder="패스워드를 입력해 주세요.">
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend>배송 정보</legend>
+            <label for="userName">수령인 &nbsp;&nbsp;&nbsp;: </label>
+            <input type="text" name="userName" id="userName">
+            <br><br>
+            <label for="addr">주소 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </label>
+            <input type="text" name="addr" id="addr">
+        </fieldset>
+        
+        <br>
+        <input type="submit" value="회원가입">
+        <br><br>
+</body>
+</html>
