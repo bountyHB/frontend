@@ -1,0 +1,146 @@
+/* * {
+    color: green;
+} */
+
+/* 속성 선택자 */
+/* div 중에 name 속성을 가지고 있는 태그 선택 */
+div[name] {
+    color: slateblue;
+}
+
+/* div 중에 name 값이 name1과 일치하는 태그 선택 */
+div[name = name1]{
+    color: red;
+}
+
+/* div 중에 name 속성 안에 name1이 포함되어있는 태그 선택 (단, 속성 값은 띄어쓰기로 구분)*/
+div[name ~= name1]{
+    background-color: beige;
+}
+
+/* div 중에 class 속성 안에 class가 포함되어 있는 태그 선택 (단, 속성 값은 -로 구분)*/
+div[class |= class]{
+    color: orange;
+}
+
+/* div 중에 name 속성이 name으로 시작되는 태그 선택*/
+div[name ^= name]{
+    color: goldenrod;
+}
+
+/* div 중에 class 속성이 class로 끝나는 태그 선택 */
+div[class $= class]{
+    background-color: bisque;
+}
+
+/* div 중에 class 속성 중에 i를 포함하는 태그 선택 */
+div[class *= i]{
+    color: mediumseagreen;
+}
+
+/* 클래스가 div-class인 것 중 name 속성값에 name3이 포함되어 있는 태그 선택 (단, 속성값이 띄어쓰기로 구분) */
+.div-class[name ~= name3]{
+/* .div-class[name ~= "name3 name1"]{ */
+    background-color: pink;
+}
+
+/* 자식 선택자와 후손(하위) 선택자 */
+#test1>h4{
+    color: red;
+}
+
+#test1>ul>h4{
+    color: orange;
+}
+
+#test1>ul>li{
+    color: gold;
+}
+
+#test1>li{
+    color: green;
+}
+
+#test1 li{
+    background-color: lightcyan;
+}
+
+/* 7.동위 선택자 */
+#div-test{
+    background-color: lightcoral;
+}
+
+/* div는 body라는 공통조상을 가지고 있다. */
+/* 바로 뒤에 있는 요소 하나만 선택되었다. */
+#div-test+div{
+    background-color: lightsalmon;
+}
+
+/* #div-test~div{
+    background-color: lightgoldenrodyellow;
+} */
+
+/* 반응 선택자 */
+#active-test, #hover-test{
+    background-color: lavender;
+    width: 200px;
+    height: 200px;
+}
+
+/* 클릭시 변경됨 */
+#active-test:active{
+    background-color: lightpink;
+}
+
+/* 마우스를 올려놓으면 변경됨 */
+#hover-test:hover{
+    background-color: lightseagreen;
+}
+
+/* 마우스를 올려놓으면 변경됨 */
+#userId:focus{
+    border: 4px solid royalblue;
+    background-color:thistle;
+}
+
+/* 체크박스 선택시 체크박스가 변경됨 */
+input[type=checkbox]:checked{
+    width: 30px;
+    height: 30px;
+}
+
+/* input태그 checkbox속성의 레이블요소의 글자크기를 키운다. */
+input[type=checkbox]+label{
+    font-size: 20px;
+}
+
+/* 체크박스 선택시 글자크기가 변경됨. */
+input[type=checkbox]:checked+label{
+    font-size: 40px;
+}
+
+/* 버튼 중에 활성화 되어있는 것만 찾아서 색깔을 바꿔준다. */
+button:enabled {
+    background-color: lightskyblue;
+}
+
+/* 버튼 중에 비활성화 되어있는 것만 찾아서 색깔을 바꿔준다. */
+button:disabled {
+    color: lightpink;
+}
+
+option:enabled{
+    background-color: palevioletred;
+}
+
+option:disabled{
+    background-color: royalblue;
+}
+
+
+
+
+
+
+
+
