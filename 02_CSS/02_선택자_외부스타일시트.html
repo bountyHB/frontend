@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 02</title>
+    <!-- 외부 스타일 시트 -->
+    <link href="./02_CSS_선택자(2).CSS" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>CSS 선택자 02</h1>
+
+    <h2>5. 속성 선택자</h2>
+    <p>선택자 뒤에 [속성 = 속성값] 을 사용해서 요소를 선택할 때 사용한다.</p>
+
+    <!-- div.div-class[name=name$]{div$}*3+div.class-div[name=name3]{div4} -->
+    <div class="div-class" name="name1">div1</div>
+    <div class="div-class" name="name2">div2</div>
+    <div class="div-class" name="name3 name1">div3</div>
+    <div class="class-div" name="name3">div4</div>
+
+    <h2>6. 자식 선택자와 후손(하위) 선택자  </h2>
+    <p>자식 : 바로 하위 요소들 / 후손 : 하위 요소들 전부</p>
+    <div id="test1">
+        <h4>자식입니다.</h4>
+        <h4>나도 자식입니다.</h4>
+        <ul>
+            <h4>나도 자식입니다.</h4>
+            <li>나는 ul의 자식이면서 div의 후손입니다.</li>
+            <li>나는 ul의 자식이면서 div의 후손입니다.</li>
+        </ul>
+        <li>나는 div의 자식 입니다.</li>
+    </div>
+
+    <h2>7. 동위 선택자</h2>
+    <p>동위 관계(같은 레벨)에서 뒤에 위치한 요소를 선택할 때 사용한다.</p>
+    <!-- div*5{div$} -->
+    <div id ="div-test">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+
+    <h2>8. 반응 선택자</h2>
+    <p>사용자의 특정 동작에 따라 요소를 선택할 때 사용한다.</p>
+
+    <div id="active-test">active</div>
+    <br>
+    <div id="hover-test">hover</div>
+
+    <br><br>
+
+    <label for="userId">아이디 : </label>
+    <input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요.">
+
+    <h2>9. 상태 선택자</h2>
+    <p>요소의 상태에 따라 요소를 선택할 때 사용한다.</p>
+
+    <input type="checkbox" name="fruit" id="apple" value="apple">
+    <label for="apple">사과</label>
+    
+    <input type="checkbox" name="fruit" id="banana" value="banana" disabled>
+    <label for="banana">바나나</label>
+
+    <br><br>
+
+    <button>버튼 1</button>
+    <button disabled>버튼 2</button>
+
+    <br><br>
+
+    <label>당신의 연령대는?
+        <select>
+            <option disabled>10대</option>
+            <option disabled>20대</option>
+            <option>30대</option>
+            <option>40대</option>
+            <option>50대</option>
+        </select>
+    </label>
+
+    <h2>10. 구조 선택자</h2>
+    <p>특정 위치에 있는 태그를 선택할 때 사용한다. (위치로 구분)</p>
+    <div id="test2">
+        <p>구조 선택자 테스트 1</p>
+        <p>구조 선택자 테스트 2</p>
+        <p>구조 선택자 테스트 3</p>
+        <p>구조 선택자 테스트 4</p>
+        <p>구조 선택자 테스트 5</p>
+        <pre>구조 선택자 테스트 6</pre>
+    </div>
+    
+    <br>
+
+    <p>특정 위치에 있는 태그를 선택할 때 사용한다. (태그 별로 구분)</p>
+    <div id="test3">
+        <p>구조 선택자 테스트 1</p>
+        <p>구조 선택자 테스트 2</p>
+        <p>구조 선택자 테스트 3</p>
+        <p>구조 선택자 테스트 4</p>
+        <p>구조 선택자 테스트 5</p>
+        <pre>구조 선택자 테스트 6</pre>
+    </div>
+
+    <h2>11. 문자 선택자</h2>
+    <p>태그 내부에서 특정 조건의 문자를 선택할 때 사용한다.</p>
+    
+    <div id="test4">
+        <p>
+            전성욱 아티스트는 "나는 '토이 스토리'를 극장에서 봤고 그 때부터 3D 애니메이션 장르에 푹 빠져 들었다. 
+            윈도우 95 컴퓨터를 쓰던 때인데, 아무것도 몰랐던 시절이라 그림판에 선을 하나씩 다 그려 3D처럼 보이게 놀아보기도 했다"고 말했다.
+            이어 "때문에 이번 스핀오프 참여가 너무 신났고, 맡은 장면마다 열심히 구현하려 노력했다. 
+            무엇보다 우주 액션 장면에 공을 들였고, 픽사 최초이자 애니메이션 최초일텐데 가상의 아이맥스 촬영으로 스펙터클하면서도 장대한 이미지를 완성할 수 있었다"고 자신했다.
+            이채연 애니메이터는 "나 역시 참여만으로 큰 영광이었던 작업이다. 
+            하고 있는데도 실감이 안 나고 '비현실적이다'는 생각을 했다"며 "애니메이터는 캐릭터에 생명을 불어 넣어야 하기 때문에 캐릭터에 대한 높은 이해가 있어야 한다. 
+            감독님의 요구 아래 최대한 현실화 시키려 노력했다"고 덧붙였다.
+            '버즈 라이트이어'는 미지의 행성에 고립된 인류를 탈출시키기 위한 ‘버즈’와 그의 정예 부대 요원들의 운명을 건 미션 수행을 그린 작품 이다. 
+            크리스 에반스와 '토르' 시리즈 감독으로 유명한 타이카 와이티티가 목소리 연기에 참여해 주목도를 높인다. 오는 15일 개봉한다.
+        </p>
+    </div>
+
+    <h2>12. 부정 선택자</h2>
+    <!-- div#test5>(p{테스트$})*5 -->
+    <div id="test5">
+        <p class="p">테스트1</p>
+        <p>테스트2</p>
+        <p>테스트3</p>
+        <p>테스트4</p>
+        <p>테스트5</p>
+    </div>
+
+</body>
+</html>

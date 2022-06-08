@@ -137,6 +137,106 @@ option:disabled{
     background-color: royalblue;
 }
 
+/* 구조 선택자 */
+/* 형제 관계 태그 중 첫 번째 태그 선택 */
+#test2 p:first-child {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+/* 마지막에 p태그가 아니여서 스타일이 적용되지 않는다. */
+/* 스타일이 적용되려면 위치와 태그가 전부 맞아야 된다. */
+#test2 p:last-child {
+    background-color: orange;
+    color: whitesmoke;
+}
+
+/* 형제 관계 태그 중 앞에서 수열 번째 태그 선택 */
+/* ()안에 2~ 5까지 가능 */
+/* 혹은 수식 사용 가능 (2n 짝수)(2n-1 홀수) */
+/* odd(홀수) even(짝수) */
+#test2 p:nth-child(even){
+    background-color: yellowgreen;
+    color: white;
+}
+
+/* 형제 관계 태그 중 뒤에서 수열 번째 태그 선택 */
+#test2 p:nth-last-child(4){
+    background-color: skyblue;
+    color: white;
+}
+
+/* 형제 관계 태그 중 첫 번째 태그 선택 */
+#test3 p:first-of-type {
+    background-color: palevioletred;
+    color: white;
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+/* p태그 중에 마지막 요소를 선택한다. */
+#test3 p:last-of-type {
+    background-color: silver;
+    color: white;
+}
+
+/* 형제 관계 태그 중 앞에서 수열 번째 태그 선택 */
+#test3 p:nth-of-type(2n) {
+    background-color: slateblue;
+    color: white;
+}
+
+/* 형제 관계 태그 중 뒤에서 수열 번째 태그 선택 */
+#test3 p:nth-last-of-type(4) {
+    background-color: seagreen;
+    color: white;
+}
+
+/* 문자 선택자 */
+/* 첫 번째 글자를 선택해서 스타일 적용 */
+#test4 p::first-letter{
+    font-size: 2em;
+}
+
+/* 첫 번째 라인을 선택해서 스타일 적용 */
+#test4 p::first-line{
+    background-color: seagreen;
+    color: wheat;
+}
+
+/* 요소 내용 앞에 위치하는 공간을 선택  */
+#test4 p::before{
+    content: '1.';
+}
+
+/* 요소 내용 뒤에 위치하는 공간을 선택  */
+#test4 p::after{
+    content: '-End';
+    font-size: 2em;
+}
+
+/* 사용자가 드래그한 글자 스타일 변경 */
+#test4 p::selection{
+    background-color: lightpink;
+    color: lightseagreen;
+}
+
+/* 부정 선택자 */
+/* p타입 중에 클래스 p 가 아닌것만 선택 */
+#test5 p:not(.p){
+    background-color: beige;
+    color: palevioletred;
+}
+
+/* 홀 수인 것만 선택 */
+/* not 안에 가상선택자도 가능하다 */
+#test5 p:not(:nth-child(odd)){
+    background-color: peachpuff;
+    color: skyblue;
+}
+
+
+
 
 
 
