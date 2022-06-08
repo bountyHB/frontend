@@ -1,0 +1,85 @@
+/* *{
+    color: mediumslateblue;
+} */
+
+/* backgroud는 기본적으로 투명이기 때문에 상속되지 않는다. */
+/* body{
+    background-color: aquamarine;
+    font-family: hack, '궁서체';
+} */
+
+#ff1{
+    font-family: '필기체';
+}
+
+#ff2{
+    font-family: '궁서체';
+}
+
+#ff3{
+    font-family: '없는 글꼴', 'dx영화자막';
+}
+
+/* 방법1. link */
+#wf{
+    font-family: 'Yeon Sung', cursive;
+    font-size: 1.5em;
+}
+
+/* 방법2. @import */
+#wf{
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 1.5em;
+}
+
+/* font-size */
+#fs1{
+    font-size: 30px;
+    /* font-size: 20pt; */
+}
+
+#fs2{
+    font-size: 3em;
+}
+
+/* em : 부모요소의 크기를 기준(1em)으로 상대적으로 책정된다. */
+/* rem : (r = root) html에 설정되어있는 16px 기본 폰트값을 기준으로 상속과 상관없이 크기를 책정한다. */
+#fs2>span{
+    /* font-size: 1em; */
+    font-size: 1rem;
+}
+
+/* %는 부모의 크기를 기준으로 크기를 조정한다. */
+#fs3{
+    font-size:150%;
+    /* font-size:1.5em; */
+}
+
+/* font-weight */
+#fw1{
+    /* font-weight: 700; */
+    font-weight: bold;
+}
+
+#fw2{
+    font-weight: lighter;
+}
+
+#fw3{
+    font-weight: bolder;
+}
+
+/* font-style */
+#fst1{
+    font-style: italic;
+}
+
+#fst2{
+    font-style: oblique;
+}
+
+
+/* font-variant */
+#fv{
+    font-variant: small-caps;
+}

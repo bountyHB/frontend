@@ -1,0 +1,49 @@
+/* color */
+#c-name{
+    color: red;
+}
+
+#c-16{
+    color: #f75bf7;
+    /* color: #f0f; */
+}
+
+#c-rgb{
+    /* color: rgb(red, green, blue); */
+    color: rgb(255, 255, 0);
+}
+
+#c-rgba{
+    /* color: rgba(red, green, blue, alpha); */
+    color: rgba(255,0,0,.3);
+}   
+
+/* text-decoration */
+#td1{
+    text-decoration: underline;
+}
+
+#td2{
+    text-decoration: line-through;
+}
+
+#td3{
+    text-decoration: overline;
+}
+
+#td4{
+    text-decoration: none;
+}
+
+/* text-transform */
+#tt1{
+    text-transform: capitalize;
+}
+
+#tt2{
+    text-transform: uppercase;
+}
+
+#tt3{
+    text-transform: lowercase;
+}
