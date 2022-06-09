@@ -1,0 +1,39 @@
+/* text-align */
+#ta1{
+    text-align: left;    
+}
+
+#ta2{
+    text-align: right;    
+}
+
+#ta3{
+    text-align: center;    
+}
+
+/* text-indent */
+#ti{
+    text-indent: 100px;
+}
+
+/* line-height */
+#lh{
+    line-height: 30px;
+}
+
+/* text-overflow */
+/* 사용을 하기 위해서는 white-space와 overflow를 같이 사용해야 한다. */
+#to{
+    background-color: lightpink;
+    width: 200px;
+    /* 줄바꿈이 일어나지 않게 해주어야 함 */
+    white-space: nowrap;
+    /* 넘어가는 글을 보여주지 않음 */
+    overflow: hidden;
+    /* 넘어가는 글을 보여주지 스크롤로 보여줌 */
+    /* overflow: scroll; */
+    /* 속성에 맞게 알아서 적응 */
+    /* overflow: auto; */
+    /* 넘어가는 글을 말줄임표로 보여줌 */
+    text-overflow: ellipsis;
+}

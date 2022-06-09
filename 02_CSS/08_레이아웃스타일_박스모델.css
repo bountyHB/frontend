@@ -1,0 +1,48 @@
+/* 박스 모델 */
+/* width, height */
+.size-test{
+    border: 3px solid red;
+}
+
+#fixed-size{
+    width: 200px;
+    height: 200px;
+}
+
+#variable-size{
+    /* 부모크기 (body) 기준 */
+    width: 50%;
+    height: 200px;
+}
+
+/* padding, margin */
+.space{
+    width: 100px;
+    height: 100px;
+    background-color: wheat;
+}
+
+#padding1{
+    padding: 10px;
+}
+
+#padding2{
+    /* padding-top: 50px; */
+    /* padding-right: 50px; */
+    /* 위/아래 30px, 좌/우 50px */
+    /* padding: 30px 50px; */
+    /* 위, 우, 아래, 좌*/
+    padding: 10px 20px 30px 40px;
+}
+
+#margin1{
+    margin: 40px;
+}
+
+/* margin의 상하는 중첩될 수 있다.(큰 값 만큼으로 여백이 정해짐) */
+#margin2{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}    

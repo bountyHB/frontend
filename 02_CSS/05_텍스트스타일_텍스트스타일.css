@@ -47,3 +47,64 @@
 #tt3{
     text-transform: lowercase;
 }
+
+/* text-shadow */
+#bg{
+    background-color: black;
+    width: 200px; 
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#ts{
+    color: red;
+    font-size: 50px;
+    text-shadow: -7px 5px 5px blue,
+                -10px 7px 7px orange;
+}
+
+/* white-space */
+#ws{
+    border: 1px solid;
+    width: 200px;
+    /* white-space: nomal; */
+    /* white-space: nowrap; */
+    /* white-space: pre; */
+    /* white-space: pre-line; */
+    white-space: pre-wrap;
+}
+
+/* letter-spacing */
+#ls{
+    letter-spacing: 5px;
+}
+
+
+/* word-spacing */
+#wsp{
+    word-spacing: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

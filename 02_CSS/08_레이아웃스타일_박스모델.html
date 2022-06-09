@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모델</title>
+    <link rel="stylesheet" href="./08_레이아웃스타일_박스모델.css">
+</head>
+<body>
+    <h1>박스 모델</h1>
+    <hr> 
+
+    <h2>width/height</h2><br>
+    <h3>고정 크기</h3>
+    <div id="fixed-size" class="size-test"></div>
+
+    <h3>가변 크기</h3>
+    <div id="variable-size" class="size-test"></div>
+
+    <hr>
+    <h2>display</h2><br>
+    <h3>블록 레벨 요소를 인라인 레벨 요소로 변경</h3>
+    <p>display : inline</p>
+    <div class="display inline">1번째 영역</div>
+    <div class="display inline">2번째 영역</div>
+    <div class="display inline">3번째 영역</div>
+    <div class="display inline">4번째 영역</div>
+    <div class="display inline">5번째 영역</div>
+    
+    <h3>인라인 레벨 요소를 블록 레벨 요소로 변경</h3>
+    <p>display : block</p>
+    <span class="display block">1번째 영역</span>
+    <span class="display block">2번째 영역</span>
+    <span class="display block">3번째 영역</span>
+    <span class="display block">4번째 영역</span>
+    <span class="display block">5번째 영역</span>
+    
+    <h3>인라인 블록 요소</h3>
+    <p>display : inline-block</p>
+    <div class="display inline-block">1번째 영역</div>
+    <div class="display inline-block">2번째 영역</div>
+    <div class="display inline-block">3번째 영역</div>
+    <div class="display inline-block">4번째 영역</div>
+    <div class="display inline-block">5번째 영역</div>
+    
+
+    <hr>
+    <h2>padding, margin</h2><br>
+    <div class="space">기준 div</div>
+    <br>
+    <h3>padding</h3>
+    <div class="space" id="padding1">전체 padding</div>
+    <br>
+    <div class="space" id="padding2">부분 padding</div>
+    
+    <br>
+    <h3>margin</h3>
+    <div class="space" id="margin1">전체 margin</div>
+    <div class="space" id="margin2">부분 margin</div>
+
+</body>
+</html>
