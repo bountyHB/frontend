@@ -1,0 +1,23 @@
+/* 다단 스타일 */
+.column-wrap{
+    border: 1px solid;
+    height: 150px;
+    overflow: scroll;
+}
+
+#column1{
+    column-width: 300px;
+    column-gap: 50px;
+    /* column-rule-width: 2px;
+    column-rule-style: solid;
+    column-rule-color: orange; */
+    column-rule: 2px solid orange;
+}
+
+#column2{
+    column-count: 3;
+}
+
+#column2>h4{
+    column-span: all;
+}

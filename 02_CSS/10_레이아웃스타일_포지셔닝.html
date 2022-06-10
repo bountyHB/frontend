@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션</title>
+    <link rel="stylesheet" href="./10_레이아웃스타일_포지셔닝.css">
+</head>
+<body>
+    <h2>position</h2>
+    <div id="outer">
+        <div id="first"></div>
+        <div id="second"></div>
+    </div>
+
+    <div id="fixed"></div>
+
+    <h2>float, clear</h2>
+    <!-- div.float{$$$}*5 -->
+    <div class="float">001</div>
+    <div class="float">002</div>
+    <div class="float">003</div>
+    <div class="float">004</div>
+    <div class="float">005</div>
+
+    <!-- float은 이후의 요소들에게 영향을 주기 때문에 clear를 같이 써주어야한다. -->
+    <h2 style="clear:both">visibility</h2>
+    <div class="visibility" id="visibility1"></div>
+    <div class="visibility" id="visibility2"></div>
+    <div class="visibility" id="visibility3"></div>
+
+    <h2>z-index</h2>
+    <div id="z-outer">
+        <!-- (div.z-index#z-index$)*3 -->
+        <div class="z-index" id="z-index1"></div>
+        <div class="z-index" id="z-index2"></div>
+        <div class="z-index" id="z-index3"></div>
+    </div>
+
+</body>
+</html>

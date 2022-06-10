@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 스타일</title>
+    <style>
+        /* body{
+            background-color: lightskyblue;
+        } */
+        #bg-color{
+            width: 90%;
+            /* background-color: beige; */
+            /* background-color: #966; */
+            /* background-color: rgb(232, 22, 566); */
+            /* background-color: rgba(232, 22, 566, 0.3); */
+            /* background-color: hsl(40, 100%, 50%); */
+            background-color: hsl(40, 100%, 50%, 0.5);
+        }
+        
+        .bg-clip{
+            width: 50%;
+            margin: 30px;
+            padding: 30px;
+            border: 15px dashed rgba(0, 0, 0, .3);
+            background-color: hsl(40, 100%, 50%, 0.5);
+        }
+        
+        #bg-clip1{
+            background-clip: border-box;
+        }
+        
+        #bg-clip2{
+            background-clip: padding-box;
+        }
+        
+        #bg-clip3{
+            background-clip: content-box;
+        }
+        
+        #bg-img{
+            border: 15px solid rgba(0, 0, 0, .3);
+            width: 70%;
+            height: 300px;
+            background-image: url("https://i.pinimg.com/564x/17/b5/41/17b541ec6a3759749711857ee8bbdf01.jpg");
+            
+            /* 이미지 반복 */
+            background-repeat: repeat-x;
+            /* background-repeat: repeat-y; */
+            /* background-repeat: no-repeat; */
+
+            /* 이미지 크기 설정 */
+            /* background-size: auto; */
+            /* background-size: contain; */
+            /* background-size: cover; */
+            /* background-size: 500px 400px; */
+            background-size: 100% 100%;
+
+            /* 이미지 위치 설정 */
+            /* background-position: left top; */
+            /* background-position: right top; */
+            /* background-position: center top; */
+            /* background-position: left center; */
+            /* background-position: center center; */
+            /* background-position: right center; */
+            /* background-position: left bottom; */
+            /* background-position: center bottom; */
+            /* background-position: right bottom; */
+            /* background-position: 50px 50px; */
+            background-position: 30% 30%;
+
+            /* 이미지 배치 기준 설정 */
+            /* background-origin: padding-box; */
+            /* background-origin: border-box; */
+            background-origin: content-box;
+
+            /* 이미지를 고정하도록 설정 */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>색상 스타일</h1>
+    <hr>
+    <h2>background-color</h2><br>
+    <div id="bg-color">
+        지난 8일 서울 메가박스 성수점 더 부티크에서는 대한민국-도미니카공화국 수교 60주년 기념으로 
+        ‘제1회 도미니카공화국 영화제’ 개막식이 진행됐다. 
+        페데리코 꾸에요 까밀로 대사는 "이번 영화제는 대한민국과 도미니카공화국의 수교 60주년을 기념하는 
+        첫번째 행사이며, 앞으로도 지속적인 사업과 교류를 통해 양국 관계 발전과 양국 국민 간 영원한 우정을 기원한다"고 전했다.
+        도미니카공화국은 배우 황정민, 하정우, 유연석이 출연한 넷플릭스 오리지널 ‘수리남’의 촬영지로 
+        주목을 받고 있으며 "도미니카공화국 영화제가 영화산업이 더 번창한 한국에서 도미니카 
+        영화를 즐길 수 있는 기회가 되고, 앞으로 역량을 확장해 공동제작으로 확대되기를 바란다"고 덧붙였다.
+    </div>
+
+    <div class="bg-clip" id="bg-clip1">
+        지난 8일 서울 메가박스 성수점 더 부티크에서는 대한민국-도미니카공화국 수교 60주년 기념으로 
+        ‘제1회 도미니카공화국 영화제’ 개막식이 진행됐다. 
+        페데리코 꾸에요 까밀로 대사는 "이번 영화제는 대한민국과 도미니카공화국의 수교 60주년을 기념하는 
+        첫번째 행사이며, 앞으로도 지속적인 사업과 교류를 통해 양국 관계 발전과 양국 국민 간 영원한 우정을 기원한다"고 전했다.
+        도미니카공화국은 배우 황정민, 하정우, 유연석이 출연한 넷플릭스 오리지널 ‘수리남’의 촬영지로 
+        주목을 받고 있으며 "도미니카공화국 영화제가 영화산업이 더 번창한 한국에서 도미니카 
+        영화를 즐길 수 있는 기회가 되고, 앞으로 역량을 확장해 공동제작으로 확대되기를 바란다"고 덧붙였다.
+    </div>
+
+    <div class="bg-clip" id="bg-clip2">
+        지난 8일 서울 메가박스 성수점 더 부티크에서는 대한민국-도미니카공화국 수교 60주년 기념으로 
+        ‘제1회 도미니카공화국 영화제’ 개막식이 진행됐다. 
+        페데리코 꾸에요 까밀로 대사는 "이번 영화제는 대한민국과 도미니카공화국의 수교 60주년을 기념하는 
+        첫번째 행사이며, 앞으로도 지속적인 사업과 교류를 통해 양국 관계 발전과 양국 국민 간 영원한 우정을 기원한다"고 전했다.
+        도미니카공화국은 배우 황정민, 하정우, 유연석이 출연한 넷플릭스 오리지널 ‘수리남’의 촬영지로 
+        주목을 받고 있으며 "도미니카공화국 영화제가 영화산업이 더 번창한 한국에서 도미니카 
+        영화를 즐길 수 있는 기회가 되고, 앞으로 역량을 확장해 공동제작으로 확대되기를 바란다"고 덧붙였다.
+    </div>
+
+    <div class="bg-clip" id="bg-clip3">
+        지난 8일 서울 메가박스 성수점 더 부티크에서는 대한민국-도미니카공화국 수교 60주년 기념으로 
+        ‘제1회 도미니카공화국 영화제’ 개막식이 진행됐다. 
+        페데리코 꾸에요 까밀로 대사는 "이번 영화제는 대한민국과 도미니카공화국의 수교 60주년을 기념하는 
+        첫번째 행사이며, 앞으로도 지속적인 사업과 교류를 통해 양국 관계 발전과 양국 국민 간 영원한 우정을 기원한다"고 전했다.
+        도미니카공화국은 배우 황정민, 하정우, 유연석이 출연한 넷플릭스 오리지널 ‘수리남’의 촬영지로 
+        주목을 받고 있으며 "도미니카공화국 영화제가 영화산업이 더 번창한 한국에서 도미니카 
+        영화를 즐길 수 있는 기회가 되고, 앞으로 역량을 확장해 공동제작으로 확대되기를 바란다"고 덧붙였다.
+    </div>
+
+    <hr>
+    <h2>배경 이미지</h2><br>
+    <div id="bg-img"></div>
+
+</body>
+</html>

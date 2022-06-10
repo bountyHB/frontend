@@ -13,7 +13,7 @@
 #border2{
     border-style: hidden;
     /* 수평거리 수직거리 흐림정도 번짐정도 */
-    box-shadow: 10px 10px 25px 20px rosybrown ;
+    box-shadow: 0px 0px 20px 10px rosybrown ;
 }
 
 #border3{
