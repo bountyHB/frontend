@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴바 만들기</title>
+    <style>
+
+        /* 전체 틀 */
+        nav{
+            border: 2px solid red;
+            width: 1000px;
+            height: 40px;
+        }
+
+        /* 메뉴 전체 블록 조절 */
+        #navi{
+            border: 2px solid orange;
+            list-style-type: none;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* 메뉴 블록 조절 */
+        #navi>li{
+            border: 2px solid gold;
+            width: 20%;
+            height: 100%;
+            float: left;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* 메뉴 글씨조절 */
+        #navi a{
+            text-decoration: none;
+            color: lightseagreen;
+            font-size: 1.5em;
+            font-weight: bold;
+            height: 100%;
+            line-height: 35px;
+            display: block;
+        }
+
+        /* 메뉴에 마우스 대면 색상 변경 */
+        #navi a:hover{
+            color: slateblue;
+        }
+
+        /* 메뉴에 마우스 대면 하위 메뉴가 뜨도록 */
+        #navi>li>a:hover+ul{
+            border: 2px solid lightseagreen;
+            display: block;
+        }
+
+        /* 하위 메뉴 위치 조절 */
+        #navi>li>ul{
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+
+        /* 마우스 올려놓고 떠나도 그대로 떠있게 */
+        /* 이렇게 해야 떠있는 메뉴도 클릭 가능 */
+        #navi>li>ul:hover{
+            border: 2px solid lightseagreen;
+            display: block;
+        }
+
+        /* 하위 메뉴에 마우스 대면 색상 변경 */
+        #navi>li>ul a:hover{
+            color: palevioletred;
+            background-color: beige;
+        }
+
+        /* 하위 메뉴 글씨조절 */
+        #navi>li>ul a{
+            border: 2px solid seagreen;
+            font-size: 1em;
+            color: skyblue;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>메뉴바 만들기</h1>
+    
+    <nav>
+        <ul id="navi">
+            <li><a href="#">JAVA</a></li>
+            <li><a href="#">ORACLE</a></li>
+            <li>
+                <a href="#">FRONT</a>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">JQuery</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SERVER</a>
+                <ul>
+                    <li><a href="#">SERVLET / 자바클래스</a></li>
+                    <li><a href="#">JSP / HTML 안에 자바코드를 넣음</a></li>
+                    <li><a href="#">AJAX / 비동기통신</a></li>
+                </ul>
+            </li>
+            <li><a href="#">FRAMEWORK</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

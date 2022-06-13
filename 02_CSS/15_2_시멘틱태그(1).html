@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그(1)</title>
+    <style>
+    
+    div{
+        border: 1px solid lightseagreen;
+        /* 삐져나가는 것과 줄바꿈을 없애줌 */
+        box-sizing: border-box;
+    }
+
+    #wrap{
+        height: 800px;
+        width: 1000px;
+        /* 가운데 정렬이 됨. */
+        margin: auto;
+    }
+    
+    #header{
+        height: 20%;
+    }
+    
+    #content{
+        height: 60%;
+        
+    }
+    
+    #sideA{
+        height: 100%;
+        width: 15%;
+        float: left;
+    }
+    
+    #sideB{
+        height: 100%;
+        width: 85%;
+        float: right;
+    }
+    
+    #footer{
+        height: 20%;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 상단부분 -->
+        <div id="header"><h1>시맨틱 태그(1)</h1></div>
+        <!-- 내용부분 -->
+        <div id="content">
+            <!-- 좌측부분 -->
+            <div id="sideA"></div>
+            <!-- 우측부분 -->
+            <div id="sideB"></div>
+        </div>
+        <!-- 하단부분 -->
+        <div id="footer"></div>
+
+    </div>
+</body>
+</html>

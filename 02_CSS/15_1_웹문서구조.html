@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 문서 구조</title>
+    <style>
+        #outer{
+            width: 300px;
+            height: 150px;
+            /* 패딩 영역은 침범하지 않음 */
+            padding: 20px;
+            border: 20px solid skyblue;
+        }
+
+        /* outer의 안에 넣고싶었는데 삐져나오게 됨 */
+        /* contents와 테두리 부분이 따로이기 때문. */
+        /* #inner{
+            width: 100%;
+            height: 100%;
+            border: 20px solid lightpink;
+        } */
+        
+        /* 아래와 같이 바꾸게 되면 괜찮아짐*/
+        /* 요소 전체가  */
+        #inner{
+            width: 100%;
+            height: 100%;
+            border: 20px solid lightpink;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            border: 5px solid lightcoral;
+            width: 500px;
+            height: 300px;
+        }
+
+        #inner1{
+            border: 5px solid lightgreen;
+            width: 100%;
+            height: 70%;
+            box-sizing: border-box;
+        }
+        
+        #inner2{
+            border: 5px solid lightskyblue;
+            width: 100%;
+            height: 30%;
+            box-sizing: border-box;
+        }
+
+        /* 위를 리팩토링하면,  */
+        /* #inner1, #inner2{
+            border: 5px solid lightgreen;
+            width: 100%;
+            box-sizing: border-box;
+        }        
+        
+        #inner1{
+            height: 70%;
+        }
+
+        #inner2{
+            height: 30%;
+        } */
+
+        /* div는 블록레벨 요소이기 때문에 좌우로 붙지 않고 상하로 분리됨. */
+        /* #inner3{
+            border: 5px solid lightgreen;
+            width: 70%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        #inner4{
+            border: 5px solid lightskyblue;
+            width: 30%;
+            height: 100%;
+            box-sizing: border-box;
+        } */
+        
+        /* display 요소를 주소, margin으로 틈을 없애야한다. */
+        /* 그러나 너무 복잡함 */
+        /* #inner3{
+            border: 5px solid lightgreen;
+            width: 70%;
+            height: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        
+        #inner4{
+            border: 5px solid lightskyblue;
+            width: 30%;
+            height: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+            margin-left: -4px;
+        } */
+        
+        /* 블록 속성을 무시하고 배치할 수 있는 float 속성을 이용 */
+        #inner3{
+            border: 5px solid lightgreen;
+            width: 70%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+        }
+        
+        #inner4{
+            border: 5px solid lightskyblue;
+            width: 30%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 문서 구조</h1>
+    <hr>
+    <h2>div안에 또 다른 div 넣기</h2><br>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+
+    <hr>
+    <h2>div안에 또 다른 div 여러 개 넣기</h2><br>
+    <h3>상/하 div 2등분 하기</h3>
+    <div class="wrap">
+        <div id="inner1"></div>
+        <div id="inner2"></div>
+    </div>
+    
+    <h3>좌/우 div 2등분 하기</h3>
+    <div class="wrap">
+        <div id="inner3"></div>
+        <div id="inner4"></div>
+    </div>
+</body>
+</html>

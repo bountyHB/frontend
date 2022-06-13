@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼 만들기</title>
+    <style>
+        /* 전체적으로 외곽선 주어 알아보기 편하게 */
+        /* div, form, input{
+            box-sizing: border-box;
+            border: 1px solid seagreen;
+        } */
+
+        /* 전체 틀 */
+        #login_wrap{
+            border: 2px solid red;
+            width: 300px;
+            height: 120px;
+        }
+
+        /* 로그인폼 */
+        #login_form{
+            border: 2px solid orange;
+            height: 80%;
+        }
+
+        /* 로그인폼 안에 div들에게 float로 속성주기 */
+        #login_form>div{
+            float: left;
+        }
+
+        /* 로그인폼 인풋(아이디&패스워드 부분)틀 설정 */
+        #login_form_input{
+            border: 2px solid gold;
+            width: 65%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* 로그인폼 인풋(아이디&패스워드 부분)외곽선 안에 들어갈 인풋부분(입력칸) 설정*/
+        #login_form_input>input{
+            width: 100%;
+            height: 50%;
+            border: 2px solid rebeccapurple;
+            box-sizing: border-box;
+        }
+        
+        /* 로그인폼 서밋부분(로그인) 틀 설정*/
+        #login_form_submit{
+            border: 2px solid seagreen;
+            width: 35%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* 로그인폼 서밋부분(로그인) 내용 설정*/
+        #login_form_submit>input{
+            width: 100%;
+            height: 100%;
+            font-size: 1.4em;
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* 로그인링크 폰트 정렬 설정 */
+        #login_link{
+            height: 20%;
+            text-align: center;
+            padding: 2px;
+        }
+        
+        /* 로그인링크 폰트 정렬 설정 */
+        #login_link>a{
+            /* a에서 밑줄 제거 */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            /* 글자 간격 조절 */
+            margin: 10px;
+            color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>로그인 폼 만들기</h1>
+
+    <div id="login_wrap">
+        <form id="login_form">
+            <div id="login_form_input">
+                <input type="text" placeholder="아이디를 입력하세요." required>
+                <input type="password" placeholder="패스워드를 입력하세요." required>
+            </div>
+            <div id="login_form_submit">
+                <input type="submit" value="로그인">
+            </div>
+        </form>
+        <div id="login_link">
+            <a href="#">회원가입</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+        </div>
+    </div>
+
+</body>
+</html>
