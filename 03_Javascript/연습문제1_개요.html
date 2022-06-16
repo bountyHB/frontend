@@ -58,44 +58,45 @@
     <p>버튼에 따라 크기 조절이 가능하도록 만들기</p>
     <div id="div2" class="div-test" ></div>
     <!-- (1) 3개의 함수로 만들기 -->
-    <!-- <button onclick="small();">50X50</button>
+    <button onclick="small();">50X50</button>
         <button onclick="orig();">100X100(기본값)</button>
-        <button onclick="large();">200X200</button> -->
+        <button onclick="large();">200X200</button>
     <!-- (1) 1개의 함수로 만들기 (매개변수 이용) -->
-    <button onclick="setSize('50px');" div-size="50">50X50</button>
+    <!-- <button onclick="setSize('50px');" div-size="50">50X50</button>
     <button onclick="setSize('100px');">100X100(원본)</button>
-    <button onclick="setSize('200px');">200X200</button>
+    <button onclick="setSize('200px');">200X200</button> -->
     <script>
     // (1) 3개의 함수로 만들기
     // 전역변수 선언 
     // var div2 = document.getElementById('div2'); 
-    //     function small(){
-    //         div2.style.width = '50px';
-    //         div2.style.height = '50px';
-    //     }
-    //     function orig(){
-    //         div2.style.width = '100px';
-    //         div2.style.height = '100px';
-    //     }
-    //     function large(){
-    //         div2.style.width = '200px';
-    //         div2.style.height = '200px';
-    //     }
+        function small(){
+            // 큰 따옴표, 작은 따옴표 둘 다 됨.
+            div2.style.width = "50px";
+            div2.style.height = "50px";
+        }
+        function orig(){
+            div2.style.width = '100px';
+            div2.style.height = '100px';
+        }
+        function large(){
+            div2.style.width = '200px';
+            div2.style.height = '200px';
+        }
     
     // (2) 하나의 함수로 만들기
     // 자바스크립트에는 자료형이 없기 때문에 변수명만 써줘도 된다.
     // 여러개일 경우, 여러개 작성도 가능하다.
     // 자바스크립트의 경우 매개변수의 갯수와 호출시 매개변수의 갯수가 일치하지 않더라도 오류가 뜨지 않는다.
-    function setSize (size){
-        var div2 = document.getElementById('div2');
+    // function setSize (size){
+    //     var div2 = document.getElementById('div2');
 
         // window의 객체의 현재 event(click)가 발생한 요소(targe)(=button)
         // 그 요소에서 getAttribute 메소드를 이용해 div-size (커스텀한 속성)를 가져온다.
         // console.log(window.event.target.getAttribute('div-size'));
 
-        div2.style.width = size + 'px';
-        div2.style.height = size;
-    }
+    //     div2.style.width = size + 'px';
+    //     div2.style.height = size;
+    // }
     </script>
 
     <hr>
@@ -116,6 +117,10 @@
                 var price = document.getElementById('price').value;
 
                 var div3 = document.getElementById('div3');
+
+                // div3 변수를 만들지 않았는데도 되는 이유 :  
+                // id 속성을 주면, id와 똑같은 변수가 자동으로 맵핑되어있어 사용가능
+                // 하지만 이 기능은 지양하는 편이다.
                 div3.innerHTML += `${customer}님이 구매하시려는 ${product}는 ${price}원 입니다.`;
             }
         </script>
