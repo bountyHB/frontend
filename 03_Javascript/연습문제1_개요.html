@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요 실습 문제</title>
+    <style>
+        .div-test{
+            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        textbox{
+            width: 100px;
+            height: 100px;
+        }
+        
+        #div3{
+            border: 1px solid;
+            margin-top: 10px;
+            width: 200px;
+            height: 150px;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>개요 실습 문제</h1>
+    <hr>
+    <h2>문제 1. 색상 조절하기</h2>
+    <p>색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들기</p>
+    <div id="div1" class="div-test"></div>
+    <input id="color" type="color">
+    <button onclick="changeColor();">변경</button>
+    <script>
+        function changeColor(){
+            // id를 이용해서 컬러의 벨류값을 가져와서 변수에 대입
+            var color = document.getElementById('color').value;
+            // id를 이용해서 div1의 값을 가져와서 변수에 대입
+            var div1 = document.getElementById('div1');
+
+            // div1의 변수.스타일.백그라운드컬러에 컬러 벨류값 대입.
+            div1.style.backgroundColor = color;
+        }
+    </script>
+
+    <hr>
+    <h2>문제 2. 크기 변경하기</h2>
+    <p>버튼에 따라 크기 조절이 가능하도록 만들기</p>
+    <div id="div2" class="div-test" ></div>
+    <!-- (1) 3개의 함수로 만들기 -->
+    <!-- <button onclick="small();">50X50</button>
+        <button onclick="orig();">100X100(기본값)</button>
+        <button onclick="large();">200X200</button> -->
+    <!-- (1) 1개의 함수로 만들기 (매개변수 이용) -->
+    <button onclick="setSize('50px');" div-size="50">50X50</button>
+    <button onclick="setSize('100px');">100X100(원본)</button>
+    <button onclick="setSize('200px');">200X200</button>
+    <script>
+    // (1) 3개의 함수로 만들기
+    // 전역변수 선언 
+    // var div2 = document.getElementById('div2'); 
+    //     function small(){
+    //         div2.style.width = '50px';
+    //         div2.style.height = '50px';
+    //     }
+    //     function orig(){
+    //         div2.style.width = '100px';
+    //         div2.style.height = '100px';
+    //     }
+    //     function large(){
+    //         div2.style.width = '200px';
+    //         div2.style.height = '200px';
+    //     }
+    
+    // (2) 하나의 함수로 만들기
+    // 자바스크립트에는 자료형이 없기 때문에 변수명만 써줘도 된다.
+    // 여러개일 경우, 여러개 작성도 가능하다.
+    // 자바스크립트의 경우 매개변수의 갯수와 호출시 매개변수의 갯수가 일치하지 않더라도 오류가 뜨지 않는다.
+    function setSize (size){
+        var div2 = document.getElementById('div2');
+
+        // window의 객체의 현재 event(click)가 발생한 요소(targe)(=button)
+        // 그 요소에서 getAttribute 메소드를 이용해 div-size (커스텀한 속성)를 가져온다.
+        // console.log(window.event.target.getAttribute('div-size'));
+
+        div2.style.width = size + 'px';
+        div2.style.height = size;
+    }
+    </script>
+
+    <hr>
+    <h2>문제 3. HTML 태그에 접근</h2>
+    <p>텍스트 박스로 입력받은 데이터를 가져와서 출력하기<br>(단, 구매자는 태그이름, 상품명은 아이디, 구매가격은 name값으로 접근)</p>
+        <label for="">구매자 : </label>
+        <input type="text" name="customer" id="customer" placeholder="구매자의 이름을 입력하세요."><br><br>
+        <label for="">상품명 : </label>
+        <input type="text" name="product" id="product" placeholder="구매 상품명을 입력하세요."><br><br>
+        <label for="">가격 : </label>
+        <input type="text" name="price" id="price" placeholder="구매 가격을 입력하세요."><br><br>
+        <button onclick="printValue();">입력값 출력하기</button><br>
+        <div id="div3"></div>
+        <script>
+            function printValue(){
+                var customer = document.getElementById('customer').value;
+                var product = document.getElementById('product').value;
+                var price = document.getElementById('price').value;
+
+                var div3 = document.getElementById('div3');
+                div3.innerHTML += `${customer}님이 구매하시려는 ${product}는 ${price}원 입니다.`;
+            }
+        </script>
+
+    <hr>
+    <h2>문제 4. 테이블 만들기</h2>
+    <button onclick="makeTable();">테이블 생성</button>
+    <div id="div4" style="margin-top: 10px;"></div>
+    <!-- 1행 2열짜리 테이블 만드는 법 -->
+    <!-- <table border="1">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+    <script>
+        function makeTable(){
+            var count = 1;
+            var table = '<table border="1">';
+            var row = prompt('행의 개수는?');
+            var col = prompt('열의 개수는?');
+            var div4 = document.getElementById('div4');
+            
+            // 그냥 테이블 만드는 법
+            // div4.innerHTML = '<table border="1"><tr><td></td><td></td></tr></table>';
+
+            // for문으로 적용
+            for(var i=0; i<row; i++){
+                table += '<tr>'
+                for(var j=0; j<col; j++){
+                    table += `<td>${count++}</td>`
+                }
+                table += '</tr>'
+            }
+            table += '</table>';
+            div4.innerHTML = table;
+        }
+    </script>
+s</body>
+</html>
