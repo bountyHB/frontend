@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 문법</title>
+
+    <style>
+        .area{
+            width: 600px; 
+            height: 300px; 
+            border: 1px solid;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            overflow: scroll;
+        }
+    </style>
+
+    <script src="./02_기본문법.js"></script>
+</head>
+<body>
+    <h1 id="heading1">기본 문법</h1>
+    
+    <script>
+        // document.getElementById('heading1').style.backgroundColor = 'pink';
+    </script>
+
+    <h2>1. 변수</h2>
+    <p>컴퓨터 메모리(RAM)에 값을 저장하기 위해 할당받는 공간을 변수라고 한다.</p>
+
+    <h3>1) 변수 선언</h3>
+    <p>변수를 선언할 때는 var, let, const 키워드를 사용한다.</p>
+
+    <h2>2. 자료형</h2>
+    <p>자바스크립트에서는 변수에 자료형을 지정해주지 않고 변수에 대입되는 값에 의해 자료형이 결정된다.</p>
+
+    <button onclick="typeTest();">자료형 테스트</button>
+
+    <div class="area" id="div1"></div>
+
+</body>
+</html>
