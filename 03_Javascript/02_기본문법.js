@@ -99,10 +99,19 @@
         let check = false; // 논리값
         let hobbies = ['축구', '농구', '야구']; // 배열
         let user = {
-            name : '경가',
+            id : 'hbb',
             age : 20,
             height : 183.2,
-            hobbies : ['축구', '농구', '야구']
+            // hobbies : ['축구', '농구', '야구']
+            // 값으로 위에있는 배열을 준 것.
+            // hobbies : hobbies
+            // 속성명과 변수명이 같을 경우 생략가능.
+            hobbies,
+            // 메소드도 추가 가능.
+            // 메소드 : 객체내부에 포함되어있음
+            // 함수 : 객체랑 상관없이 동작
+            addFunc : function(){
+            }
         }; // 객체를 만드는 리터럴
         let func = function (x,y) {
             return x + y;
@@ -120,4 +129,100 @@
         div1.innerHTML += `hobbies : ${hobbies}, type : ${typeof(hobbies)}<br><br>`
         div1.innerHTML += `user : ${user}, type : ${typeof(user)}<br><br>`
         div1.innerHTML += `func : ${func}, type : ${typeof(func)}<br><br>`
+    }
+
+    // 3. 데이터 형변환
+    // 1) 문자열과 숫자의 '+' 연산
+    function plustTest(){
+        let result1 = 7 + 7; // 14
+        let result2 = 7 + '7'; // 77 문자열로 연결연산됨
+        let result3 = '7' + 7; // 77 문자열로 연결연산됨
+        let result4 = 7 + 7 + '7'; // 147
+        let result5 = 7 + '7' + 7; // 777
+        let result6 = 7 * '7'; // 49
+        let result7 = '7' - 3; // 4
+        let result8 = 4 / '2' + 3; // 5
+        let result9 = '2' * '7'; // 14 전부 숫자여야지 계산할 수 있기 때문에
+        let result10 = 'a' * '7'; // NaN (Not a Number)
+
+        let div2 = document.getElementById('div2');
+
+        div2.innerHTML = '<b>hello</b><br>';
+        div2.innerHTML += `result1 : ${result1}<br>`;
+        div2.innerHTML += `result2 : ${result2}<br>`;
+        div2.innerHTML += `result3 : ${result3}<br>`;
+        div2.innerHTML += `result4 : ${result4}<br>`;
+        div2.innerHTML += `result5 : ${result5}<br>`;
+        div2.innerHTML += `result6 : ${result6}<br>`;
+        div2.innerHTML += `result7 : ${result7}<br>`;
+        div2.innerHTML += `result8 : ${result8}<br>`;
+        div2.innerHTML += `result9 : ${result9}<br>`;
+        div2.innerHTML += `result10 : ${result10}<br>`;
+    }
+
+    // 2. 형변환 함수
+    function castingTest(){
+        let div3 = document.getElementById('div3');
+
+        // 문자 => 숫자
+        // 문자타입의 변수를 숫자타입으로 형변환 (생성자함수) (생성자 함수와 일반 함수를 구분 : 생성자는 new를 사용 가능)
+        div3.innerHTML += `${Number('3')}, type : ${typeof(Number('3'))}<br>`;
+        // 일반함수
+        div3.innerHTML += `${parseInt('3')}, type : ${typeof(parseInt('3'))}<br>`;
+        // 16진수를 정수로 바꾸면서 10진수로 바꿔줌
+        div3.innerHTML += `${parseInt('0xff, 16')}, type : ${typeof(parseInt('0xff, 16'))}<br>`;
+        div3.innerHTML += `${parseFloat('3')}, type : ${typeof(parseFloat('3'))}<br>`;
+        
+        // 숫자 => 문자
+        div3.innerHTML += `${String(3)}, type : ${typeof(String(3))}<br>`;
+    }
+
+    // 3. 연산자 
+    function opTest(){
+        let div4 = document.getElementById('div4');
+
+        div4.innerHTML = '"==" 연산자 테스트<br>';
+        div4.innerHTML += `'7' == 7 : ${'7' == 7}<br> `; // true
+        div4.innerHTML += `'7' == '7' : ${'7' == '7'}<br> `; // true
+        div4.innerHTML += `7 == 7 : ${7 == 7}<br> `; // true
+        
+        div4.innerHTML = '"===" 연산자 테스트<br>';
+        div4.innerHTML += `'7' === 7 : ${'7' === 7}<br> `; // false
+        div4.innerHTML += `'7' === '7' : ${'7' === '7'}<br> `; // true
+        div4.innerHTML += `7 === 7 : ${7 === 7}<br> `; // true
+    }
+
+    // 4. 
+    // 1) for in rnans 
+    function forinTest(){
+        let div5 = document.getElementById('div5'); 
+        let arr = ['김삿갓', '홍길동', '이몽룡', '성춘향'];
+        let obj = {
+            name : '김삿갓',
+            age : 20,
+            job : '강사'
+        }
+
+        // 김삿갓 홍길동 이몽룡 성춘향
+        for(let i=0; i<arr.length; i++){
+            div5.innerHTML += `${arr[i]}  `;
+        }
+
+        // 0, 김삿갓 1, 홍길동 2, 이몽룡 3, 성춘향
+        div5.innerHTML += '<br><br>';
+        for (const key in arr){
+            div5.innerHTML += `${key}, ${arr[key]}  `;
+        }
+
+        // 김삿갓 홍길동 이몽룡 성춘향
+        div5.innerHTML += '<br><br>';
+        for (const iterator of arr){
+            div5.innerHTML += `${iterator}  `;
+        }
+
+        // name, 김삿갓 age, 20 job, 강사
+        div5.innerHTML += '<br><br>';
+        for (const key in obj){
+            div5.innerHTML += `${key}, ${obj[key]}  `;
+        }
     }
