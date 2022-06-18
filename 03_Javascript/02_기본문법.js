@@ -160,7 +160,7 @@
         div2.innerHTML += `result10 : ${result10}<br>`;
     }
 
-    // 2. 형변환 함수
+    // 2) 형변환 함수
     function castingTest(){
         let div3 = document.getElementById('div3');
 
@@ -177,7 +177,7 @@
         div3.innerHTML += `${String(3)}, type : ${typeof(String(3))}<br>`;
     }
 
-    // 3. 연산자 
+    // 4. 연산자 
     function opTest(){
         let div4 = document.getElementById('div4');
 
@@ -192,8 +192,8 @@
         div4.innerHTML += `7 === 7 : ${7 === 7}<br> `; // true
     }
 
-    // 4. 
-    // 1) for in rnans 
+    // 5. 제어문 
+    // 1) for in / for of 구문
     function forinTest(){
         let div5 = document.getElementById('div5'); 
         let arr = ['김삿갓', '홍길동', '이몽룡', '성춘향'];
