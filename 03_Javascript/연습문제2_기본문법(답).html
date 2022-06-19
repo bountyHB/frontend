@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 문법_실습</title>
+    <style>
+        div {
+            border: 1px solid red;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>기본 문법_실습</h1>
+
+    <hr>
+
+    <h2>문제 1. 텍스트 필드에 작성한 문자열의 길이를 구하기</h2>
+    
+    <fieldset>
+        <legend>보기</legend>
+        <input type="text" placeholder="글자를 작성해 보세요" size=100 id="text1">
+    </fieldset>
+    
+    <br>
+
+    <div id="result1"></div>
+
+    <br>
+
+    <button onclick="stringLength();">확인하기</button>
+    
+    <script>
+        function stringLength() {
+            let text = document.getElementById("text1").value;
+
+            document.getElementById("result1").innerHTML = "보기의 문자열 길이는 " + text.length + "글자 입니다.";
+        }
+    </script>
+
+    <hr>
+
+    <h2>문제 2. 다음 보기에 있는 문자열을 콤마(,)를 기준으로 잘라내어 하나하나 출력</h2>
+
+    <fieldset>
+        <legend>보기</legend>
+        <label id="la1">콜라,사이다,햄버거,피자,한약</label>
+    </fieldset>
+    
+    <br>
+    
+    <div id="result2"></div>
+    
+    <br>
+
+    <button onclick="stringSplit();"> 확인하기</button>
+    
+    <script>
+        function stringSplit() {
+            let label = document.getElementById("la1");
+            let arr = label.innerHTML.split(",");
+            let resultDiv = document.getElementById("result2");
+
+            console.log(arr);
+            console.log(typeof(arr));
+
+            for(let i = 0; i < arr.length; i++) {
+                resultDiv.innerHTML += `${i + 1}. ${arr[i]} <br>`;
+            }
+        }
+    </script>
+    <hr>
+
+    <h2>문제 3. 간이 계산기 만들기</h2>
+
+    <fieldset>
+        <label>첫번째 값 : <input type="number" id="num1"></label><br>
+        <label>두번째 값 : <input type="number" id="num2"></label><br>
+    </fieldset>
+
+    <br>
+
+	<input type="button" value="+" onclick="calculator(this.value)"> 
+	<input type="button" value="-" onclick="calculator(this.value)"> 
+	<input type="button" value="x" onclick="calculator(this.value)"> 
+	<input type="button" value="/" onclick="calculator(this.value)"> 
+    <input type="button" value="%" onclick="calculator(this.value)"> 
+    
+    <br><br>
+
+    계산결과 : <span id="calc"></span>
+
+    <script>
+        function calculator(op) {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result = 0;
+
+            switch(op) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;  
+                case 'x':
+                    result = num1 * num2;
+                    break;  
+                case '/':
+                    result = num1 / num2;
+                    break;  
+                case '%':
+                    result = num1 % num2;
+                    break;  
+            }
+
+            console.log(result);
+
+            document.getElementById("calc").innerHTML = result;
+        }
+    </script>
+    
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+</body>
+</html>

@@ -9,7 +9,6 @@
         .area{
             border: 1px solid red;
             height: 20px;
-            width: 500px;
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -25,39 +24,42 @@
     </p>
     <fieldset>
         <legend>보기</legend>
-        사과, 바나나, 당근 <br>
-        김밥, 치즈, 떡볶이, 햄버거 <br>
-        환타, 사이다, 콜라 <br>
-        고양이,강아지
+        <p id="p1">사과,바나나,당근</p>
+        <p id="p2">김밥,치즈,떡볶이,햄버거</p>
+        <p id="p3">환타,사이다,콜라</p>
+        <p id="p4">고양이,강아지</p>
     </fieldset><br>
-    <input type="text" placeholder="이곳에 입력하세요" style="width: 500px;">
-    <button>전송 및 처리</button>
+    <input type="text" id="test1" placeholder="이곳에 입력하세요" style="width: 500px;">
+    <button id="btn1">전송 및 처리</button>
 
     <hr>
 
     <h2>문제 2</h2>
-    <p>다음 보기에 있는 문자열을 가지고 정갑과 같이 만드세요. (별도의 문자열을 쓰면 안 된다.)<br>
+    <p>다음 보기에 있는 문자열을 가지고 정답과 같이 만드세요. (별도의 문자열을 쓰면 안 된다.)<br>
         그리고 출력 부분에 출력하도록 하면 됩니다. 정답 : "bklove"
     </p>
     <fieldset>
         <legend>보기</legend>
-        k b <br> e v o l
+        <p id="p5">k b</p>
+        <p id="p6">e v o l</p>
     </fieldset>
     <div id="div1" class="area"></div>
-    <button>처리</button>
+    <button id="btn2">처리</button>
 
     <hr>
 
     <h2>문제 3</h2>
     <p>문자열을 여러 개 입력받은 후 출력 버튼 클릭 시 입력했던 모든 문자열이 출력되도록 만드세요 <br>
-        단, 모든 문자열은 내림차순으로 정렬 후에 출력된다. 예) 개구리 -> 입력, 바나나 -> 입력, 복숭아 -> 입려 <br>
+        단, 모든 문자열은 내림차순으로 정렬 후에 출력된다. 예) 개구리 -> 입력, 바나나 -> 입력, 복숭아 -> 입력 <br>
         출력 : 복숭아, 바나나, 개구리
     </p>
     <fieldset>
         <legend>입력</legend>
-        <input type="text">
-        <button>입력</button>
+        <input type="text" id="input">
+        <button id="btn3">입력</button>
     </fieldset>
+    <div id="output" class="area"></div>
+    <button id="btn4">출력</button>
 
     <hr>
 
@@ -70,24 +72,18 @@
         예시) 삭제 : 당근 / 추가 : 타코야끼 <br>
         결과-> 피자 치킨 햄버거 떡볶이 타코야끼
     </p>
-    <fieldset>
+    <fieldset style="margin-bottom: 10px;">
         <legend>보기</legend>
-        피자 치킨 당근 햄버거 떡볶이
+        <label id="test4">피자 치킨 당근 햄버거 떡볶이</label>
     </fieldset>
-    <label for="addfood">
-        <input type="text" id="addfood" name="addfood" placeholder="삭제할 음식 이름을 입력하세요" style="width: 200px;">
+    <label for="input1">
+        <input type="text" id="input1" placeholder="삭제할 음식 이름을 입력하세요" style="width: 200px;">
     </label>
-    <label for="deletefood">
-        <input type="text" id="deletefood" name="deletefood" placeholder="추가할 음식 이름을 입력하세요" style="width: 200px;">
+    <label for="input2">
+        <input type="text" id="input2" placeholder="추가할 음식 이름을 입력하세요" style="width: 200px;">
     </label>
     <div id="div2" class="area"></div>
-    <button>처리 및 출력</button>
-
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
+    <button id="btn5">처리 및 출력</button>
 
     <script src="./연습문제3_배열.js"></script>
 </body>
