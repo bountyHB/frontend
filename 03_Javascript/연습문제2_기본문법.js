@@ -9,40 +9,63 @@ window.onload = function(){
 
     let btn2 = document.getElementById('btn2');
     btn2.onclick = function (){
-        let field2 = document.getElementById('field2');
-        let p2 = document.getElementById('p2');
-        let div2 = document.getElementById('div2');
+        let p1 = document.getElementById('p1').textContent;
+        let div3 = document.getElementById('div3');
+        let hey = p1.split(',');
 
-        div2.innerHTML = `${p2}`;
+        // console.log(hey);
+
+        for (let i = 0; i<hey.length; i++){
+            // div3.innerHTML += `${hey[i]} `;
+            div3.innerHTML += hey[i] + ' ';
+        }
     }
 
-    let brn3 = document.getElementById('btn3');
-    let input1 = document.getElementById('input1').value;
-    let input2 = document.getElementById('input2');
+    let btn3 = document.getElementById('btn3');
+    let btn4 = document.getElementById('btn4');
+    let btn5 = document.getElementById('btn5');
+    let btn6 = document.getElementById('btn6');
+    let btn7 = document.getElementById('btn7');
     
     btn3.onclick = function(){
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
         let result = document.getElementById('result');
         
-        console.log(input1);
+        // console.log(input1);
+        // console.log(input2);
+        // console.log(input1+input2);
+
+        result.innerHTML = `${parseInt(input1)+parseInt(input2)}`;
         
+    }
+    btn4.onclick = function(){
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = document.getElementById('result');
 
+        result.innerHTML = `${input1-input2}`;
+    }
+    btn5.onclick = function(){
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = document.getElementById('result');
 
-        result.innerHTML = `${input1}`;
+        result.innerHTML = `${input1*input2}`;
+    }
+    btn6.onclick = function(){
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = document.getElementById('result');
+
+        result.innerHTML = `${input1/input2}`;
+    }
+    btn7.onclick = function(){
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = document.getElementById('result');
+
+        result.innerHTML = `${input1%input2}`;
     }
 
-
-    let brn4 = document.getElementById('btn4');
-    let brn5 = document.getElementById('btn5');
-    let brn6 = document.getElementById('btn6');
-    let brn7 = document.getElementById('btn7');
-
 }
-
-
-
-
-
-
-
-
-
