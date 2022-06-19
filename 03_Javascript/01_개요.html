@@ -84,28 +84,28 @@
                 alert('저만 배고픈가요?ㅠㅠ');
             }
         }
-        </script>
-        <br><br>
+    </script>
+    <br><br>
         
-        <h4>window.prompt() 매소드</h4>
-        <!-- 인라인 스크립트 방식 -->
-        <p>이름 물어보기</p>
-        <button onclick="checkPrompt();">prompt</button>
-        
-        <!-- 내부 스크립트 방식 -->
-        <script>
-            function checkPrompt(){
-                // 호출해서 사용자가 입력하는 내용을 이 변수에 담아준다
-                var name = prompt('당신의 이름은 무엇인가요?');
-                
+    <h4>window.prompt() 매소드</h4>
+    <!-- 인라인 스크립트 방식 -->
+    <p>이름 물어보기</p>
+    <button onclick="checkPrompt();">prompt</button>
+    
+    <!-- 내부 스크립트 방식 -->
+    <script>
+        function checkPrompt(){
+            // 호출해서 사용자가 입력하는 내용을 이 변수에 담아준다
+            var name = prompt('당신의 이름은 무엇인가요?');
+            
             if(name != null){
                 // alert(name + '님 환영합니다!');
                 // ES6부터 제공되는, 탬플릿 리터럴로 작성하는 법
                 alert(`${name}님 환영합니다.`)
             }
-        }
-        </script>
-        <br><br><br>
+    }
+    </script>
+    <br><br><br>
 
     <h3>데이터 출력</h3>
 
@@ -136,8 +136,8 @@
             var div = document.getElementById('div1');
 
             console.log(div); // 태그가 출력됨
-            console.log(div.innerHTML); // div1에 들어있는 글이 태그가 적용되지 않고 함께 출력된다
-            console.log(div.innerText); // div1에 들어있는 글이 태그가 적용되어 출력된다
+            console.log(div.innerHTML); // div1에 들어있는 글이 태그가 적용되어 출력된다
+            console.log(div.innerText); // div1에 들어있는 글이 태그가 적용되지 않고 함께 출력된다
         
             div.innerHTML += '<br> innerHTML 속성으로 값 변경'; // 태그가 적용되어 출력
             // div.innerText += '<br> innerText 속성으로 값 변경'; // 태그가 적용되지 않고 함께 출력
@@ -195,7 +195,7 @@
                 console.log(hobbies[i].checked);
                 
                 // 만약 결과값이 true이면, 아래 구문을 실행
-                if(hobbies[i].checked){
+                if(hobbies[i].checked==true){
                     // 하비배열중 true인 것들의 벨류값을 출력
                     // div3.innerHTML += `${hobbies[i].value}<br>`;
                     // 페이지 안에서 계속해서 새로 선택후 버튼을 누르게되어도 누적되어 출력되기 때문에
@@ -203,14 +203,14 @@
                     checkItem += `${hobbies[i].value}<br>`;
                 }
             }
-            div3.innerText = checkItem;
+            div3.innerHTML = checkItem;
         }
         </script>
         <br><br>
 
-<h3>태그명으로 접근</h3>
-<ul>
-    <li>목록 1</li>
+    <h3>태그명으로 접근</h3>
+    <ul>
+        <li>목록 1</li>
         <li>목록 2</li>
         <li>목록 3</li>
         <li>목록 4</li>
@@ -265,7 +265,7 @@
         }
     </script><br><br>
 
-    <h3>text 필드에 작성된 값을 읽어오는 방법 </h3>
+    <h3>text 필드에 작성된 값을 읽어오는 방법</h3>
     <form>
         <label for="userName">이름</label>
         <input type="text" name="userName" id="userName">
