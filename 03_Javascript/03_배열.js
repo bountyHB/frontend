@@ -155,6 +155,5 @@ window.onload = function(){
         div2.innerHTML += `array.splice(1,0,'프랭크') : [${array.splice(1,0,'프랭크')}]<br>`; // []
         div2.innerHTML += `array : [${array}]<br>`; // [프랭크,프랭크,오션]
         });
-ㄴ
 }
 
