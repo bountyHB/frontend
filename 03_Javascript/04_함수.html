@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <h1>함수</h1>
+
+    <hr>
+    <h2>1.함수 선언</h2>
+    <h3>1) 선언적 함수</h3>
+    <p>funtion 키워드에 함수명을 작성하여 선언하는 방법이다.</p>
+    <button onclick="test1();">실행 확인</button>
+
+    <h3>2) 익명 함수</h3>
+    <p>함수명을 작성하지 않고 선언하는 방법이다.<br>(이벤트 핸들러 등록 시 주로 사용)</p>
+    <button id="btn2">실행 확인</button>
+    <p id="p1"></p>
+
+    <h3>3) 화살표 함수 (Arrow Function)</h3>
+    <p>
+        ES6에 도입된 함수 선언 방법으로 funtion 키워드 대신에 =>를 사용해서 <br>
+        좀 더 간략한 방법으로 함수를 선언할 수 있다.
+    </p>
+    <button id="btn3">실행 확인</button>
+
+    <br><br><hr>
+    <h2>2. 함수 호출</h2>
+    <h3>1) 매개 변수</h3>
+    <button id="btn4">실행 확인</button>
+    
+    <h3>2) argument 객체</h3>
+    <button id="btn5">실행 확인</button>
+    
+    <br><br><hr>
+    <h2>3. 함수 리턴</h2>
+    <h3>1) 일반적인 값 리턴</h3>
+    <button id="btn6">실행 확인</button>
+
+    <h3>2) 익명 함수 리턴</h3>
+    <button id="btn7">실행 확인</button>
+
+    <br><br><hr>
+    <h2>4. 내장 함수</h2>
+    <h3>1) eval() 함수</h3>
+    계산식 : <input type="text" id="exec">
+    <button id="btn8">실행 확인</button>
+    <p id="p2"></p>
+    
+    <h3>2) isFinite(), isNaN() 함수</h3>
+    <button id="btn9">실행 확인</button>
+    <p id="p3"></p>
+
+    <script src="./04_함수.js"></script>
+</body>
+</html>
