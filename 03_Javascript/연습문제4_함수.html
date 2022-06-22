@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 실습</title>
+    <style>
+        table {
+            border:3px solid blue;
+        }
+        #result {
+            height:50px;
+            font-size:2em;
+            font-weight:bold;
+            text-align:right;
+            border:1px solid black;
+            width:210px;
+            overflow:hidden;
+        }
+        button {
+            font-size:1.5em;
+            font-weight:bold;
+            width:50px;
+            height:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>함수 실습</h1>
+
+    <hr>
+
+    <h3>계산기 만들기(내장 함수 사용)</h3>
+
+    <div>
+		<table>
+			<tr>
+				<td colspan="4">
+					<div id="result"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="left">(</button>
+				</td>
+				<td>
+					<button id="right">)</button>
+				</td>
+				<td>
+					<button id="percent">%</button>
+				</td>
+				<td>
+					<button id="clear">AC</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="seven">7</button>
+				</td>
+				<td>
+					<button id="eight">8</button>
+				</td>
+				<td>
+					<button id="nine">9</button>
+				</td>
+				<td>
+					<button id="devide">/</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="four">4</button>
+				</td>
+				<td>
+					<button id="five">5</button>
+				</td>
+				<td>
+					<button id="six">6</button>
+				</td>
+				<td>
+					<button id="astric">*</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="one">1</button>
+				</td>
+				<td>
+					<button id="two">2</button>
+				</td>
+				<td>
+					<button id="three">3</button>
+				</td>
+				<td>
+					<button id="minus">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="zero">0</button>
+				</td>
+				<td>
+					<button id="dot">.</button>
+				</td>
+				<td>
+					<button id="equal">=</button>
+				</td>
+				<td>
+					<button id="plus">+</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script>
+        let result = document.getElementById('result');
+
+        let left = document.getElementById('left');
+        left.addEventListener('click',()=>{
+            result.innerHTML = ' ';
+            result.innerHTML += '(';
+        })
+        
+        let right = document.getElementById('right');
+        right.addEventListener('click',()=>{
+            result.innerHTML += ')';
+        })
+        let percent = document.getElementById('percent');
+        percent.addEventListener('click',()=>{
+            result.innerHTML += '%';
+        })
+        let clear = document.getElementById('clear');
+        clear.addEventListener('click',()=>{
+            result.innerHTML = ' ';
+        })
+        
+        let seven = document.getElementById('seven');
+        seven.addEventListener('click',()=>{
+            result.innerHTML += '7';
+        })
+        let eight = document.getElementById('eight');
+        eight.addEventListener('click',()=>{
+            result.innerHTML += '8';
+        })
+        let nine = document.getElementById('nine');
+        nine.addEventListener('click',()=>{
+            result.innerHTML += '9';
+        })
+        let devide = document.getElementById('devide');
+        devide.addEventListener('click',()=>{
+            result.innerHTML += '/';
+        })
+        
+        let four = document.getElementById('four');
+        four.addEventListener('click',()=>{
+            result.innerHTML += '4';
+        })
+        let five = document.getElementById('five');
+        five.addEventListener('click',()=>{
+            result.innerHTML += '5';
+        })
+        let six = document.getElementById('six');
+        six.addEventListener('click',()=>{
+            result.innerHTML += '6';
+        })
+        let astric = document.getElementById('astric');
+        astric.addEventListener('click',()=>{
+            result.innerHTML += '*';
+        })
+        
+        let one = document.getElementById('one');
+        one.addEventListener('click',()=>{
+            result.innerHTML += '1';
+        })
+        let two = document.getElementById('two');
+        two.addEventListener('click',()=>{
+            result.innerHTML += '2';
+        })
+        let three = document.getElementById('three');
+        three.addEventListener('click',()=>{
+            result.innerHTML += '3';
+        })
+        let minus = document.getElementById('minus');
+        minus.addEventListener('click',()=>{
+            result.innerHTML += '-';
+        })
+        
+        let zero = document.getElementById('zero');
+        zero.addEventListener('click',()=>{
+            result.innerHTML += '0';
+        })
+        let dot = document.getElementById('dot');
+        dot.addEventListener('click',()=>{
+            result.innerHTML += '.';
+        })
+        let equal = document.getElementById('equal');
+        equal.addEventListener('click',()=>{
+            result.innerHTML = eval(result.innerHTML);
+        })
+        let plus = document.getElementById('plus');
+        plus.addEventListener('click',()=>{
+            result.innerHTML += '+';
+        })
+        </script>
+</body>
+</html>
