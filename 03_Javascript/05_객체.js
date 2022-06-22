@@ -249,7 +249,7 @@ window.onload = function(){
         div6.innerHTML = `그룹명 : ${idol.getGroupName()}, 멤버 : ${idol.getMembers()}, 멤버수 : ${idol.getMemberCount()}명`;
     });
 
-    // 7. 
+    // 7. Date 객체
 
     let btn7 = document.getElementById('btn7');
 
@@ -287,11 +287,4 @@ window.onload = function(){
         div7.innerHTML += `toTimeString: ${date1.toTimeString()}<br>`; 
 
     });
-
-
-
-
-
-
-
 }
