@@ -59,47 +59,66 @@ btn3.addEventListener('click', ()=>{
     // + : 앞선 패턴이 최소 한 번 이상 반복되는 문자열을 의미한다. {1,}
     // ? : 앞선 패턴이 최대 한 번 이상 반복되는 문자열을 의미한다. {0,1}
     
-    // let str = 'a aa aaa aaaa';
-    // div3.innerHTML = '반복 검색<br><br>';
-    // div3.innerHTML += `/a{1,2}/g : ${str.replace(/a{1,2}/g, '($&)')}<br>`; // (a) (aa) (aa)(a) (aa)(aa)
-    // // {3} == {3,3} 최소값, 최대값 지정
-    // div3.innerHTML += `/a{3}/g : ${str.replace(/a{3}/g, '($&)')}<br>`; // a aa (aaa) (aaa)a
-    // // {2,} 최소값만 지정
-    // div3.innerHTML += `/a+/g : ${str.replace(/a+/g, '($&)')}<br>`; // a (aa) (aaa) (aaaa)
-    // div3.innerHTML += `/a?/g : ${str.replace(/a?/g, '($&)')}<br>`; // (a)() (a)(a)() (a)(a)(a)() (a)(a)(a)(a)()
+    let str = 'a aa aaa aaaa';
+    div3.innerHTML = '반복 검색<br><br>';
+    div3.innerHTML += `/a{1,2}/g : ${str.replace(/a{1,2}/g, '($&)')}<br>`; // (a) (aa) (aa)(a) (aa)(aa)
+    // {3} == {3,3} 최소값, 최대값 지정
+    div3.innerHTML += `/a{3}/g : ${str.replace(/a{3}/g, '($&)')}<br>`; // a aa (aaa) (aaa)a
+    // {2,} 최소값만 지정
+    div3.innerHTML += `/a+/g : ${str.replace(/a+/g, '($&)')}<br>`; // a (aa) (aaa) (aaaa)
+    div3.innerHTML += `/a?/g : ${str.replace(/a?/g, '($&)')}<br>`; // (a)() (a)(a)() (a)(a)(a)() (a)(a)(a)(a)()
+
+});
+let btn4 = document.getElementById('btn4');
+
+btn4.addEventListener('click', ()=>{
+    let div4 = document.getElementById('div4');
     
     // 문자열의 앞, 뒤 구분
     // ^ : 문자열의 시작을 의미한다.
     // $ : 문자열의 마지막을 의미한다.
     
-    // let str = 'Javascript\nJQuery\nShellscript\nAjax';
-    // div3.innerHTML = '문자열의 앞, 뒤 구분<br><br>';
-    // div3.innerHTML += `/^j/g : ${str.replace(/^j/g, '($&)')}<br>`; 
-    // div3.innerHTML += `/^j/igm : ${str.replace(/^j/igm, '($&)')}<br>`; 
-    // div3.innerHTML += `/ipt$/igm : ${str.replace(/ipt$/igm, '($&)')}<br>`; 
-    
+    let str = 'Javascript\nJQuery\nShellscript\nAjax';
+    div4.innerHTML = '문자열의 앞, 뒤 구분<br><br>';
+    div4.innerHTML += `/^j/g : ${str.replace(/^j/g, '($&)')}<br>`; 
+    div4.innerHTML += `/^j/igm : ${str.replace(/^j/igm, '($&)')}<br>`; 
+    div4.innerHTML += `/ipt$/igm : ${str.replace(/ipt$/igm, '($&)')}<br>`; 
+});
+
+btn5.addEventListener('click', ()=>{
+    let div5 = document.getElementById('div5');
+
     // OR 검색
     // [...] 내의 문자들 중 하나라도 존재할 경우를 의미한다.
     
-    // let str = 'Javascript JQuery Ajax';
-    // div3.innerHTML = 'OR 검색<br><br>';
-    // div3.innerHTML += `/[aj]/ : ${str.replace(/[aj]/ig, '($&)')}<br>`; // (J)(a)v(a)script (J)Query (A)(j)(a)x
-    // // [...] 내의 ^는 not의 의미를 가진다. 
-    // div3.innerHTML += `/[^aj]/ : ${str.replace(/[^aj]/ig, '($&)')}<br>`; // Ja(v)a(s)(c)(r)(i)(p)(t)( )J(Q)(u)(e)(r)(y)( )Aja(x)
+    let str = 'Javascript JQuery Ajax';
+    div5.innerHTML = 'OR 검색<br><br>';
+    div5.innerHTML += `/[aj]/ : ${str.replace(/[aj]/ig, '($&)')}<br>`; // (J)(a)v(a)script (J)Query (A)(j)(a)x
+    // [...] 내의 ^는 not의 의미를 가진다. 
+    div5.innerHTML += `/[^aj]/ : ${str.replace(/[^aj]/ig, '($&)')}<br>`; // Ja(v)a(s)(c)(r)(i)(p)(t)( )J(Q)(u)(e)(r)(y)( )Aja(x)
     
-    // str = '123 JavaScript';
-    // // [...] 내의 -는 범위 지정을 의미한다.
-    // div3.innerHTML += `/[a-z]/ : ${str.replace(/[a-z]/g, '($&)')}<br>`; // 123 J(a)(v)(a)S(c)(r)(i)(p)(t)
-    // div3.innerHTML += `/[A-Z]/ : ${str.replace(/[A-Z]/g, '($&)')}<br>`; // 123 (J)ava(S)cript
-    // div3.innerHTML += `/[0-9]/ : ${str.replace(/[0-9]/g, '($&)')}<br>`; // (1)(2)(3) JavaScript
+    str = '123 JavaScript';
+    // [...] 내의 -는 범위 지정을 의미한다.
+    div5.innerHTML += `/[a-z]/ : ${str.replace(/[a-z]/g, '($&)')}<br>`; // 123 J(a)(v)(a)S(c)(r)(i)(p)(t)
+    div5.innerHTML += `/[A-Z]/ : ${str.replace(/[A-Z]/g, '($&)')}<br>`; // 123 (J)ava(S)cript
+    div5.innerHTML += `/[0-9]/ : ${str.replace(/[0-9]/g, '($&)')}<br>`; // (1)(2)(3) JavaScript
     
+});
+
+btn6.addEventListener('click', ()=>{
+    let div6 = document.getElementById('div6');
+
     // 임의의 문자열 검색
     // .은 임의의 문자 한 개를 의미하고, 문자 내용은 무엇이든 상관없다.
     
-    // str = '123 JavaScript';
-    // div3.innerHTML = '임의의 문자열 검색<br><br>';
-    // div3.innerHTML += `/..../g : ${str.replace(/..../g, '($&)')}<br>`; // (123 )(Java)(Scri)pt
+    str = '123 JavaScript';
+    div6.innerHTML = '임의의 문자열 검색<br><br>';
+    div6.innerHTML += `/..../g : ${str.replace(/..../g, '($&)')}<br>`; // (123 )(Java)(Scri)pt
+});
     
+btn7.addEventListener('click', ()=>{
+    let div7 = document.getElementById('div7');
+
     // 추가 메타 문자
     /*
         \d : 숫자를 의미한다.
@@ -111,40 +130,18 @@ btn3.addEventListener('click', ()=>{
     */
 
     let str = 'A1 B2 C3 d+4 e:5 ` ffgg77--__-- \t가\n나\n다';
-    div3.innerHTML = '추가 메타 문자<br><br>';
+    div7.innerHTML = '추가 메타 문자<br><br>';
     // /[0-9]/g : 숫자
-    div3.innerHTML += `/\\d/g : ${str.replace(/\d/g, '($&)')}<br>`; // A(1) B(2) C(3) d+(4) e:(5) ` ffgg(7)(7)--__-- 가 나 다
+    div7.innerHTML += `/\\d/g : ${str.replace(/\d/g, '($&)')}<br>`; // A(1) B(2) C(3) d+(4) e:(5) ` ffgg(7)(7)--__-- 가 나 다
     // /[^0-9]/g : 숫자가 아닌 문자
-    div3.innerHTML += `/\\D/g : ${str.replace(/\D/g, '($&)')}<br>`;
+    div7.innerHTML += `/\\D/g : ${str.replace(/\D/g, '($&)')}<br>`;
     // /[a-zA-Z0-9_]/g : 알파벳, 숫자, 언더 스코어(_)
-    div3.innerHTML += `/\\w/g : ${str.replace(/\w/g, '($&)')}<br>`; // (A)(1) (B)(2) (C)(3) (d)+(4) (e):(5) ` (f)(f)(g)(g)(7)(7)--(_)(_)-- 가 나 다
+    div7.innerHTML += `/\\w/g : ${str.replace(/\w/g, '($&)')}<br>`; // (A)(1) (B)(2) (C)(3) (d)+(4) (e):(5) ` (f)(f)(g)(g)(7)(7)--(_)(_)-- 가 나 다
     // /[^a-zA-Z0-9_]/g : 알파벳, 숫자, 언더 스코어(_)가 아닌 문자
-    div3.innerHTML += `/\\W/g : ${str.replace(/\W/g, '($&)')}<br>`; // A1( )B2( )C3( )d(+)4( )e(:)5( )(`)( )ffgg77(-)(-)__(-)(-)( )( )(가)( )(나)( )(다)
+    div7.innerHTML += `/\\W/g : ${str.replace(/\W/g, '($&)')}<br>`; // A1( )B2( )C3( )d(+)4( )e(:)5( )(`)( )ffgg77(-)(-)__(-)(-)( )( )(가)( )(나)( )(다)
     // /[ \t\n] : 공백 문자
-    div3.innerHTML += `/\\s/g : ${str.replace(/\s/g, '($&)')}<br>`; // A1( )B2( )C3( )d+4( )e:5( )`( )ffgg77--__--( )( )가( )나( )다
+    div7.innerHTML += `/\\s/g : ${str.replace(/\s/g, '($&)')}<br>`; // A1( )B2( )C3( )d+4( )e:5( )`( )ffgg77--__--( )( )가( )나( )다
     // /[^ \t\n] : 공백이 아닌 문자
-    div3.innerHTML += `/\\S/g : ${str.replace(/\S/g, '($&)')}<br>`; // (A)(1) (B)(2) (C)(3) (d)(+)(4) (e)(:)(5) (`) (f)(f)(g)(g)(7)(7)(-)(-)(_)(_)(-)(-) (가) (나) (다)
+    div7.innerHTML += `/\\S/g : ${str.replace(/\S/g, '($&)')}<br>`; // (A)(1) (B)(2) (C)(3) (d)(+)(4) (e)(:)(5) (`) (f)(f)(g)(g)(7)(7)(-)(-)(_)(_)(-)(-) (가) (나) (다)
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

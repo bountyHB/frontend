@@ -33,11 +33,37 @@
 
     <br>
 
-    <button>입력</button>
-    <button>출력</button>
+    <button id="btn1">입력</button>
+    <button id="btn2">출력</button>
 
     <script>
-        // 자바스크립트 코드 작성
+        
+        // 입력버튼을 클릭하면 이름, 나이 주소를 prompt()로 입력받고 => member 객체에 저장
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        
+        btn1.addEventListener('click', ()=>{
+            let member = { 
+                name : prompt('이름을 입력하세요'),
+                age : prompt('나이를 입력하세요'),
+                address : prompt('주소를 입력하세요')
+            }    
+            
+            // 출력버튼을 클릭하면 member 객체에 있는 정보를 출력창에 출력
+            btn2.addEventListener('click', ()=>{
+                let print = document.getElementById('print');
+                
+                // 입력받지 않은 상태에서 출력버튼을 클릭하면 '입력을 먼저 해주세요'라는 alert
+                if(member.name.length == 0 ){
+                    alert('입력을 먼저 해주세요.');
+                }else{
+                    print.innerHTML = `이름 : ${member.name}<br>`;
+                    print.innerHTML += `나이 : ${member.age}<br>`;
+                    print.innerHTML += `주소 : ${member.address}`;
+                }
+            });
+        });
+
     </script>
     <hr>
 
@@ -55,27 +81,63 @@
                 <th>주소</th>
             </tr>
             <tr>
-                <td class="name"></td>
-                <td class="age"></td>
-                <td class="addr"></td>
+                <td class="name" id="name1"></td>
+                <td class="age" id="age1"></td>
+                <td class="addr" id="addr1"></td>
             </tr>
             <tr>
-                <td class="name"></td>
-                <td class="age"></td>
-                <td class="addr"></td>
+                <td class="name" id="name2"></td>
+                <td class="age" id="age2"></td>
+                <td class="addr" id="addr2"></td>
             </tr>
             <tr>
-                <td class="name"></td>
-                <td class="age"></td>
-                <td class="addr"></td>
+                <td class="name" id="name3"></td>
+                <td class="age" id="age3"></td>
+                <td class="addr" id="addr3"></td>
             </tr>
         </table>
         <label>학생 정보 테이블</label><br>
-        <button>입력 및 출력</button>
+        <button id="btn3">입력 및 출력</button>
     </div>
 
     <script>
-        // 자바스크립트 코드 작성
+        let btn3 = document.getElementById('btn3');
+        btn3.addEventListener('click',()=>{
+            
+            // 객체 선언
+            let students = [];
+            
+            // 객체 배열 프로퍼티에 값 추가
+            students.push({name : prompt('이름'), age : prompt('나이'), addr : prompt('주소')});
+            students.push({name : prompt('이름'), age : prompt('나이'), addr : prompt('주소')});
+            students.push({name : prompt('이름'), age : prompt('나이'), addr : prompt('주소')});
+            
+            console.log(students);
+            
+            // 객체 배열을 표에 출력
+            // document.getElementById('name1').innerHTML += `${students[0].name}`;
+            // document.getElementById('name2').innerHTML += `${students[1].name}`;
+            // document.getElementById('name3').innerHTML += `${students[2].name}`;
+            
+            // document.getElementById('age1').innerHTML += `${students[0].age}`;
+            // document.getElementById('age2').innerHTML += `${students[1].age}`;
+            // document.getElementById('age3').innerHTML += `${students[2].age}`;
+
+            // document.getElementById('addr1').innerHTML += `${students[0].addr}`;
+            // document.getElementById('addr2').innerHTML += `${students[1].addr}`;
+            // document.getElementById('addr3').innerHTML += `${students[2].addr}`;
+            
+            // for (let i=0; i<3; i++) {
+            //     document.getElementById('name1').innerHTML += `${students[i].name}`;
+            // }
+            // for (let i=0; i<3; i++) {
+            //     document.getElementById('age1').innerHTML += `${students[i].age}`;
+            // }
+            // for (let i=0; i<3; i++) {
+            //     document.getElementById('addr1').innerHTML += `${students[i].addr}`;
+            // }
+
+        });
     </script>
 </body>
 </html>

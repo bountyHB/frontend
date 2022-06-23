@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 개요</title>
+
+    <!-- 1) jQuery 라이브러리를 다운로드 -->
+    <!-- <script src="./js/jquery-3.6.0.js"></script> -->
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+
+    <!-- 2) CDN(Content Delivery Network)을 통해 다운로드 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1>jQuery 개요</h1>
+
+    <h2>1. 제이쿼리(jQuery)</h2>
+    <p>존 레식에 의해 개발된 오픈 소스 기반의 JavaScript 라이브러리이다.</p>
+
+    <h2>2. 제이쿼리 적용</h2>
+    <p>1) jQuery 라이브러리를 다운로드</p>
+    <p>2) CDN(Content Delivery Network)을 통해 다운로드</p>
+    
+    <h2>3. 제이쿼리 시작</h2>
+    <p>제이쿼리는 ready 메소드를 통해 웹 문서의 모든 요소가 로드 된 후에 실행되어야 한다.</p>
+    
+    <script>
+        // 자바스크립트 방식 (2만 출력됨)
+        // window.onload = function(){
+        //     console.log('문서 읽어들이기 완료 1');
+        // }
+        // window.onload = function(){
+        //     console.log('문서 읽어들이기 완료 2');
+        // }
+
+        // 제이쿼리 방식 (1번과 2번 둘 다 출력됨)
+        $(document).ready(function(){
+            console.log('문서 읽어들이기 완료 1');
+            // p 요소들을 선택해서 글자색을 빨간색으로 변경
+            jQuery('p').css('color', 'pink');
+        
+            // 자바스크립트 예시
+            let tags = document.getElementsByTagName('p');
+            for (let i=0; i< tags.length; i++){
+                tags[i].style.color = pink;
+            };
+        });
+
+        // $(document).ready(function(){
+        //     console.log('문서 읽어들이기 완료 2');
+        // });
+    </script>
+
+</body>
+</html>

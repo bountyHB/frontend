@@ -83,15 +83,3 @@ submit.addEventListener('click', (event) => {
 
     console.log(userId);
 });
-
-
-
-
-
-
-
-
-
-
-
-

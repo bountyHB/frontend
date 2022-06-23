@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추가선택자</title>
+
+</head>
+<body>
+    <h1>추가선택자</h1>
+    
+    <h2>1. 자손, 후손 선택자</h2>
+    <div>
+        조상 
+        <ul>
+            자손1
+            <li>div의 후손이면서 ul의 자손 1</li>
+            <li>div의 후손이면서 ul의 자손 2</li>
+            <li class="ch">div의 후손이면서 ul의 자손 3</li>
+            <li class="ch">div의 후손이면서 ul의 자손 4</li>
+            <li><h3>div/ul의 후손이면서 li의 자손</h3></li>
+        </ul>
+        <h3>자손2</h3>
+        <h3>자손3</h3>
+    </div>
+
+    <h2>2. 속성선택자 </h2>
+    <input type="text">
+    <input type="number" class="test1 test2">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="button" class="test3" value="button">
+    
+    <h2>3. 입력 양식 선택자</h2>
+    <input type="text">
+    <input type="button">
+    <input type="checkbox">
+    <input type="file">
+    <br><br>
+    <input type="image" src="../resources/image/flower2.PNG">
+    
+    <h2>4. 입력 양식 상태에 대한 선택자</h2>
+    <label>활성화 텍스트 상자 : <input type="text"></label>
+    <br><br>
+    <label>비활성화 텍스트 상자 : <input type="text" disabled></label>
+    <br><br>
+    <label>활성화 버튼 : <input type="button" value="활성화"></label>
+    <br><br>
+    <label>비활성화 버튼 : <input type="button" value="비활성화" disabled></label>
+    <br><br>
+    <label>취미</label>
+    <br>
+    <label>게임 : <input type="checkbox" name="hobby" value="game" checked></label>
+    <label>음악 : <input type="checkbox" name="hobby" value="music"></label>
+    <label>영화 : <input type="checkbox" name="hobby" value="movie"></label>
+    <br><br>
+    <label for="national">국가</label>
+    <select id="national">
+        <option value="한국">한국</option>
+        <option value="미국">미국</option>
+        <option value="영국">영국</option>
+        <option value="프랑스">프랑스</option>
+    </select>
+    
+    <label for="hobby">취미</label>
+    <select id="hobby">
+        <option value="축구">축구</option>
+        <option value="야구">야구</option>
+        <option value="농구">농구</option>
+    </select>
+    <br><br>
+    <label>선택한 나라 : <input type="text" id="result1" readonly></label>
+    <br><br>
+    <label>선택한 취미 : <input type="text" id="result2" readonly></label>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./03_추가선택자.js"></script>
+
+</body>
+</html>
