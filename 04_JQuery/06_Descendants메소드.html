@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendants 메소드</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <style>
+        .wrap, .wrap * {
+            border: 2px solid lightgray;
+            display: block;
+            padding: 5px;
+            margin: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descendants 메소드</h1>
+    <p>선택된 요소의 하위 요소들을 선택할 수 있는 메소드이다.</p>
+
+    <div class="wrap">
+        <div>
+            div
+            <ul>ul
+                <li>li
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+        <div>div
+            <p>p
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let style1 = {'color':'orange', 'border':'2px solid'};
+            let style2 = {'color':'seagreen', 'border':'2px solid'};
+            let style3 = {'color':'skyblue', 'border':'2px solid'};
+            let style4 = {'color':'tomato', 'border':'2px solid'};
+            let style5 = {'color':'purple', 'border':'2px solid'};
+
+            // 클래스 속성값이 wrap인 요소의 자식 요소에 스타일 적용
+            $('.wrap').children().css(style1);
+            
+            // 클래스 속성값이 wrap인 요소의 자식의 자식 요소에 스타일 적용
+            $('.wrap').children().children().css(style2);
+            
+            // 클래스 속성값이 wrap인 요소의 자식의 자식 요소중에 ul태그(요소)에 스타일 적용
+            $('.wrap').children().children('ul').css(style3);
+            
+            // 클래스 속성값이 wrap인 요소의 모든 하위 요소 중 li태그(요소)에 스타일 적용
+            $('.wrap').children().children().children('li').css(style5);
+
+            // 클래스 속성값이 wrap인 요소의 모든 하위 요소 중 span태그(요소)에 스타일 적용
+            // children의 경우 갯수가 많지 않기 때문에 find() 사용
+            $('.wrap').find('span').css(style4);
+            
+        });
+    </script>
+</body>
+</html>

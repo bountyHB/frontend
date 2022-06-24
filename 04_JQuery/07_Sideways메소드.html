@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sideways 메소드</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <style>
+        .wrap, .wrap * {
+            border: 2px solid lightgray;
+            display: block;
+            padding: 5px;
+            margin: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sideways 메소드</h1>
+    <p>선택된 요소와 같은 레벨에 있는 요소를 선택할 수 있는 메소드이다.</p>
+
+    <div class="wrap">
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let style1 = {'color':'orange', 'border':'2px solid'};
+            let style2 = {'color':'seagreen', 'border':'2px solid'};
+            let style3 = {'color':'skyblue', 'border':'2px solid'};
+            let style4 = {'color':'pink', 'border':'2px solid'};
+
+            // h2 태그의 형제 요소들에 스타일 적용
+            $('h2').siblings().css(style1);
+            
+            // h2 태그의 형제 요소 중 p 태그에 스타일 적용
+            $('h2').siblings('p').css(style2);
+            
+            // h2 태그의 바로 다음 형제 요소에 스타일 적용 (h3)
+            $('h2').next().css(style3);
+            
+            // h2 태그의 바로 다음에 오는 모든 형제 요소에 스타일 적용 (h3, p) 
+            $('h2').nextAll().css("background-color", 'beige');
+            
+            // h2 태그 이후부터 p 태그 이전의 모든 형제 요소에 스타일 적용 (h3) 
+            $('h2').nextUntil('p').css("font-size",'3rem');
+            
+            // h2 태그의 바로 이전 형제 요소에 스타일 적용 (span)
+            $('h2').prev().css(style4);
+            
+            // h2 태그의 이전 모든 형제 요소에 스타일 적용 (span, p)
+            $('h2').prevAll().css("background-color", 'lightgreen');
+            
+            // h2 태그의 이전부터 p 태그 이후까지의 모든 형제 요소에 스타일 적용 (span)
+            $('h2').prevUntil('p').css("font-size",'3rem');
+
+        });
+    </script>
+</body>
+</html>
