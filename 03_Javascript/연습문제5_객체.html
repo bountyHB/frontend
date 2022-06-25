@@ -112,7 +112,7 @@
             students.push({name : prompt('이름'), age : prompt('나이'), addr : prompt('주소')});
             students.push({name : prompt('이름'), age : prompt('나이'), addr : prompt('주소')});
             
-            console.log(students);
+            // console.log(students);
             
             // 객체 배열을 표에 출력
             // document.getElementById('name1').innerHTML += `${students[0].name}`;
@@ -136,6 +136,17 @@
             // for (let i=0; i<3; i++) {
             //     document.getElementById('addr1').innerHTML += `${students[i].addr}`;
             // }
+
+            // 수정한 코드
+            let nameTable = document.getElementsByClassName('name');
+            let ageTable = document.getElementsByClassName('age');
+            let addrTable = document.getElementsByClassName('addr');
+
+            for(let i=0; i<3; i++){
+                nameTable[i].innerHTML = students[i].name;
+                ageTable[i].innerHTML = students[i].age;
+                addrTable[i].innerHTML = students[i].addr;
+            }
 
         });
     </script>

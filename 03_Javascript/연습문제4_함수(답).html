@@ -37,35 +37,35 @@
 		<table>
 			<tr>
 				<td colspan="4">
-					<div id="result" onclick="buttonClick(0);">0</div>
+					<div id="result">0</div>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<button id="left" onclick="buttonClick({this.innerHTML});">(</button>
+					<button id="left" onclick="buttonClick(this.innerHTML);">(</button>
 				</td>
 				<td>
 					<button id="right" onclick="buttonClick(this.innerHTML);">)</button>
 				</td>
 				<td>
-					<button id="percent" onclick="buttonClick('%');">%</button>
+					<button id="percent" onclick="buttonClick(this.innerHTML);">%</button>
 				</td>
 				<td>
-					<button id="clear" onclick="buttonClick('AC');" v>AC</button>
+					<button id="clear" onclick="buttonClick(this.innerHTML);">AC</button>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<button id="seven" onclick="buttonClick('7');">7</button>
+					<button id="seven" onclick="buttonClick(this.innerHTML);">7</button>
 				</td>
 				<td>
-					<button id="eight" onclick="buttonClick('8');">8</button>
+					<button id="eight" onclick="buttonClick(this.innerHTML);">8</button>
 				</td>
 				<td>
-					<button id="nine" onclick="buttonClick('9');">9</button>
+					<button id="nine" onclick="buttonClick(this.innerHTML);">9</button>
 				</td>
 				<td>
-					<button id="devide" onclick="buttonClick('/');">/</button>
+					<button id="devide" onclick="buttonClick(this.innerHTML);">/</button>
 				</td>
 			</tr>
 			<tr>
@@ -85,7 +85,7 @@
 			<tr>
 				<td>
 					<button id="one" onclick="buttonClick(this.innerHTML);">1</button>
-				</td> 
+				</td>
 				<td>
 					<button id="two" onclick="buttonClick(this.innerHTML);">2</button>
 				</td>
@@ -113,13 +113,15 @@
 		</table>
 	</div>
 	<script>
-        function buttonClick(button){
-            let result = document.getElementById('result');
-
+		let result = document.getElementById("result");
+			
+		function buttonClick(button){
+				
 			if(button == 'AC') {
 				result.innerHTML = 0;
 			} else if(button == '=') {
 				result.innerHTML = eval(result.innerHTML);
+
 			} else {
 				let str = button;
 				
@@ -129,8 +131,7 @@
 					result.innerHTML += str;
 				}
 			}
-        }
-
-    </script>
+		}
+	</script>
 </body>
 </html>
