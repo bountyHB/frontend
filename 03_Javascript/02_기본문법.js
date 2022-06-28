@@ -1,5 +1,4 @@
-
-    // 자바스크립트가 head 부분에 위치할때는, heading 아이디가 아직 없어 실행되지 않음.
+// 자바스크립트가 head 부분에 위치할때는, heading 아이디가 아직 없어 실행되지 않음.
     // document.getElementById('heading1').style.backgroundColor = 'pink';
 
     // 1. 변수
@@ -59,7 +58,7 @@
         // NUM3 = 20;
 
         // 2) 유효범위(스코프)
-        // var 키워드로 선언한 변수는 함수 유요 범위를 갖는다.
+        // var 키워드로 선언한 변수는 함수 유효 범위를 갖는다.
         if(true){
             var num4 = 40;
 
@@ -164,7 +163,7 @@
     function castingTest(){
         let div3 = document.getElementById('div3');
 
-        // 문자 => 숫자
+        // 문자 => 숫자 parseInt(), parseFloat()
         // 문자타입의 변수를 숫자타입으로 형변환 (생성자함수) (생성자 함수와 일반 함수를 구분 : 생성자는 new를 사용 가능)
         div3.innerHTML += `${Number('3')}, type : ${typeof(Number('3'))}<br>`;
         // 일반함수
@@ -173,7 +172,7 @@
         div3.innerHTML += `${parseInt('0xff, 16')}, type : ${typeof(parseInt('0xff, 16'))}<br>`;
         div3.innerHTML += `${parseFloat('3')}, type : ${typeof(parseFloat('3'))}<br>`;
         
-        // 숫자 => 문자
+        // 숫자 => 문자 String()
         div3.innerHTML += `${String(3)}, type : ${typeof(String(3))}<br>`;
     }
 
@@ -192,7 +191,7 @@
         div4.innerHTML += `7 === 7 : ${7 === 7}<br> `; // true
     }
 
-    // 5. 제어문 
+    // 5. 제어문
     // 1) for in / for of 구문
     function forinTest(){
         let div5 = document.getElementById('div5'); 
@@ -203,23 +202,27 @@
             job : '강사'
         }
 
+				// for문
         // 김삿갓 홍길동 이몽룡 성춘향
         for(let i=0; i<arr.length; i++){
             div5.innerHTML += `${arr[i]}  `;
         }
 
+				// for in문
         // 0, 김삿갓 1, 홍길동 2, 이몽룡 3, 성춘향
         div5.innerHTML += '<br><br>';
         for (const key in arr){
             div5.innerHTML += `${key}, ${arr[key]}  `;
         }
 
+				// for of문
         // 김삿갓 홍길동 이몽룡 성춘향
         div5.innerHTML += '<br><br>';
         for (const iterator of arr){
             div5.innerHTML += `${iterator}  `;
         }
 
+				// for in문
         // name, 김삿갓 age, 20 job, 강사
         div5.innerHTML += '<br><br>';
         for (const key in obj){
