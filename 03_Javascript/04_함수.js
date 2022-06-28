@@ -55,8 +55,7 @@ btn4.addEventListener('click', (event) => {
     // argTest() // 기본값 없으면 undifined
     // argTest() // 기본값 설정하면 기본값 출력됨
     // argTest('안녕하세요'); // 안녕하세요
-    // argTest('안녕하세요', '헤헤'); // 안녕하세요
-    
+    // argTest('안녕하세요', '헤헤'); // 안녕하세요 
     console.log(event);
     // 화살표 함수에서는 arguments 객체를 생성하지 않는다.
     // console.log(arguments); // arguments is not difined
