@@ -14,8 +14,8 @@
     }
 
     #wrap{
-        height: 800px;
-        width: 1000px;
+        height: 400px;
+        width: 500px;
         /* 가운데 정렬이 됨. */
         margin: auto;
     }
@@ -30,17 +30,32 @@
     }
     
     #sideA{
+        border: 1px solid blue;
         height: 100%;
-        width: 15%;
+        width: 5%;
         float: left;
     }
     
     #sideB{
+        border: 1px solid orange;
         height: 100%;
-        width: 85%;
-        float: right;
+        width: 10%;
+        display:inline-block;
     }
     
+    #sideC{
+        border: 1px solid lightpink;
+        height: 100%;
+        width: 79%;
+        display:inline-block;
+    }
+    
+    #sideD{
+        border: 1px solid red;
+        height: 100%;
+        width: 5%;
+        float: right;
+    }
     #footer{
         height: 20%;
     }
@@ -50,13 +65,13 @@
 <body>
     <div id="wrap">
         <!-- 상단부분 -->
-        <div id="header"><h1>시맨틱 태그(1)</h1></div>
+        <div id="header"></div>
         <!-- 내용부분 -->
         <div id="content">
-            <!-- 좌측부분 -->
             <div id="sideA"></div>
-            <!-- 우측부분 -->
             <div id="sideB"></div>
+            <div id="sideC"></div>
+            <div id="sideD"></div>
         </div>
         <!-- 하단부분 -->
         <div id="footer"></div>
